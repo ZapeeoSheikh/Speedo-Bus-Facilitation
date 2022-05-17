@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="~/Scripts/jquery-3.0.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="~/Scripts/modernizr-2.8.3.js"></script>
+
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+
+    @*Icons Link*@
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+
+    <style>
+        body {
+            padding: 0px;
+            margin: 0px;
+        }
+
+
+        .navbar-fixed-top .navbar-nav > li > a:hover, .navbar-fixed-top .navbar-nav > li > a:focus {
+            background-color: red;
+            color: #FFffff;
+        }
+
+        /*#sidebar .dropdown-menu > li > a:hover, #sidebar .dropdown-menu > li > a:focus {
+            background-color: red;
+            color: #FFffff;
+        }*/
+
+        .navbar-fixed-top .navbar-nav li .dropdown-menu {
+            border: 3px solid red;
+            margin-top: 10px;
+        }
+
+            .navbar-fixed-top .navbar-nav li .dropdown-menu li {
+                margin-top: 10px;
+                padding-left: 4px;
+                padding-right: 4px;
+            }
+
+            .navbar-fixed-top .navbar-nav li .dropdown-menu li {
+            }
+        /*#sidebar li {
+            margin-bottom: 50px;
+            text-decoration: none;
+        }*/
+
+        .navbar-fixed-top .navbar-nav li a {
+            color: #000000;
+            size: 120px;
+            letter-spacing: 2px;
+            text-decoration: none;
+        }
+
+        .navbar-fixed-top .navbar-nav, .navbar-fixed-top {
+            padding-right: 80px;
+            padding-left: 50px;
+        }
+
+            .navbar-fixed-top .navbar-nav li #live {
+                color: red;
+                size: 120px;
+                letter-spacing: 2px;
+                text-decoration: none;
+            }
+
+                .navbar-fixed-top .navbar-nav li #live:hover, .navbar-fixed-top .navbar-nav li #live:focus {
+                    border-bottom: 2px solid white;
+                    color: red;
+                    background-color: #ffffff;
+                    border-bottom: 2px solid red;
+                }
+
+        nav {
+        }
+
+        .navbar-fixed-top .navbar-nav li a:hover, #sidebar li a:focus {
+        }
+    </style>
+</head>
+<body>
+
+    @* Navigation Bar *@
+
+
+    <nav class="navbar navbar-fixed-top " style="border-radius: 0px; ">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img src="~/assets/sp bus logo.jpg" style="height: 50px; padding-top: 2px;" />
+                <a href="#" style="color: #10519f; width: 150px; size: 50px">
+                    Punjab Speedo Bus Services
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class=""><a href="#">Bus Stops</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            Recharge
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Buy Speedo Card</a></li>
+                            <li><a href="#">Card Recharge</a></li>
+                            <li><a href="#">Buy Token Online</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Routes</a></li>
+                    <li><a href="#">Jobs</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#" id="live"><i class="fa fa-map-marker "></i> Live Tracking</a></li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    @* RenderBody Portion *@
+    <div class="" style="margin-top: 55px; ">
+        @RenderBody()
+    </div>
+
+    @* Footer Portion *@
+    <!--<footer style="margin-top: 30px">
+        <nav class="navbar">
+            <div style="background-color: red; width: auto; height: 80px;">-->
+    @*<ul class="nav navbar-nav navbar-right" style="margin: 10px; letter-spacing: 2px">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shopping Area</a></li>
+            <li><a href="#">Credit Center </a></li>
+            <li><a href="#">My Cart </a></li>
+            <li><a href="#">History </a></li>
+            <li><a href="#">About us </a></li>
+
+        </ul>*@
+    <!--</div>
+        </nav>
+    </footer>-->
+
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>
