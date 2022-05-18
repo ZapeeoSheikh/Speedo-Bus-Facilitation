@@ -95,9 +95,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="assets\group del.png" />
     <Content Include="assets\sp bus logo.jpg" />
     <Content Include="assets\speedo bg.jpg" />
+    <Content Include="assets\travel easy.png" />
     <Content Include="assets\world-map.png" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
