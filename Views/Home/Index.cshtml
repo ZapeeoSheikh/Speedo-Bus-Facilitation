@@ -26,17 +26,40 @@
     Speedo Bus Servies
 </h4>
 
+<div style="padding-left: 40px;">
+    <div class="row" style="margin-left: 0px;margin-right: 0px;">
+        <div class="col-xs-12 col-sm-6 col-md-8 col-centered">
+            <div class="maintxt">
+                <img src="~/assets/travel easy.png" style=" width: 1400px; margin-top: 80px; " />
+                <h4 class="overlay-text" style="color: #000000; font-style: normal; padding-top: 440px; padding-left: 470px; font-weight: 400; font-size: 30px; margin-top: 0px; margin-left: 30px; margin-bottom: 0px;">
+                    Routes Where You Can
+                </h4>
+                <h4 class="overlay-text" style="color: #D02525; position: absolute; padding-top: 470px; padding-left: 470px ;  font-style: normal; font-weight: 400; font-size: 30px; margin-top: 4px; margin-left: 30px;  ">
+                    Travel in Speedo Bus Servies
+                </h4>
 
-<div class="row" style="margin-left: 0px;margin-right: 0px;">
-    <div class="col-xs-12 col-sm-6 col-md-8 col-centered">
-        <div class="maintxt">
-            <img src="~/assets/travel easy.png" style=" width: 1400px; margin-top: 80px; " />
-            <h4 class="overlay-text" style="color: #000000; font-style: normal; padding-top: 440px; padding-left: 470px; font-weight: 400; font-size: 30px; margin-top: 0px; margin-left: 30px; margin-bottom: 0px;">
-                Routes Where You Can
-            </h4>
-            <h4 class="overlay-text" style="color: #D02525; position: absolute; padding-top: 470px; padding-left: 470px ;  font-style: normal; font-weight: 400; font-size: 30px; margin-top: 4px; margin-left: 30px;  ">
-                Travel in Speedo Bus Servies
-            </h4>
+            </div>
         </div>
     </div>
+
+    <div class="routes">
+        @for (int i = 0; i < 18; i++)
+        {
+            <span class="dot"></span>
+        }
+
+    </div>
+
+    <button class="view">
+        <a href="" style="color: #D02525"> View all the Routes</a>
+    </button>
+
+    <h4 style="color: #000000; font-style: normal; padding-top: 40px; padding-left: 550px; font-weight: 400; font-size: 30px; margin-top: 10px; margin-left: 30px; margin-bottom: 0px;">
+        Travel Guideline that
+    </h4>
+    <h4 style="color: #D02525; position: relative;  padding-left: 580px ;  font-style: normal; font-weight: 400; font-size: 30px; margin-top: 4px; margin-left: 30px;  ">
+        You Must Know
+    </h4>
+    <img src="~/assets/bottom.png" style=" width: 1400px; margin-top: 150px; " />
+
 </div>

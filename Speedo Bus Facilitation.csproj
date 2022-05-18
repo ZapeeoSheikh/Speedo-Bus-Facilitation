@@ -95,6 +95,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\bottom.png" />
+    <Content Include="assets\logo speedo.png" />
     <Content Include="assets\sp bus logo.jpg" />
     <Content Include="assets\speedo bg.jpg" />
     <Content Include="assets\travel easy.png" />
