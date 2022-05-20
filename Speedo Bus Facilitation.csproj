@@ -97,9 +97,11 @@
   <ItemGroup>
     <Content Include="assets\bottom.png" />
     <Content Include="assets\fb.png" />
+    <Content Include="assets\FR-15.jpg" />
     <Content Include="assets\insta.png" />
     <Content Include="assets\linkedin.png" />
     <Content Include="assets\logo speedo.png" />
+    <Content Include="assets\map.jpg" />
     <Content Include="assets\sp bus logo.jpg" />
     <Content Include="assets\speedo bg.jpg" />
     <Content Include="assets\travel easy.png" />
@@ -147,6 +149,7 @@
     <Content Include="Views\Home\BusNearMe.cshtml" />
     <Content Include="Views\Home\AllRoutes.cshtml" />
     <Content Include="Views\Home\Terms.cshtml" />
+    <Content Include="Views\Home\LiveView.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
