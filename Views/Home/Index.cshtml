@@ -8,7 +8,7 @@
 <img src="~/assets/speedo bg.jpg" style="height: 659px; position: absolute; opacity: 50.0" />
 
 <button style="position:relative ; width: 155px; height: 57px; text-decoration: none; color: white; background: #F15933; border-radius: 10px; border: red; margin-top: 360px; margin-left: 350px; ">
-    <i class="fa fa-map-marker"></i> <a href="" style="color: #ffffff"> Bus Near me</a>
+    <i class="fa fa-map-marker"></i> <span style="color: #ffffff"> Bus Near me</span>
 </button>
 <button style="position: absolute; width: 55px; height: 57px; background: white; border-radius: 10px 0px 0px 10px; border: white; margin-top: 360px; margin-left: 10px;">
     <i class="fa fa-search"></i>
@@ -18,7 +18,7 @@
 
 
 
-<h4 style="color: #000000; font-style: normal; font-weight: 400; font-size: 30px; margin-top: 280px; margin-left: 30px ;margin-bottom: 0px; ">
+<h4 style="color: #000000; font-style: normal; font-weight: 600; font-size: 30px; margin-top: 280px; margin-left: 30px ;margin-bottom: 0px; ">
     Making Bus Travel Better
 </h4>
 <img src="~/assets/world-map.png" style="position: absolute; height: 190px; alignment: right; padding-left: 1100px; " />
@@ -57,12 +57,38 @@
     <h4 style="color: #000000; font-style: normal; padding-top: 40px; padding-left: 550px; font-weight: 400; font-size: 30px; margin-top: 10px; margin-left: 30px; margin-bottom: 0px;">
         Travel Guideline that
     </h4>
-    <h4 style="color: #D02525; position: relative;  padding-left: 580px ;  font-style: normal; font-weight: 400; font-size: 30px; margin-top: 4px; margin-left: 30px;  ">
+    <h4 style="color: #D02525; position: relative;  padding-left: 575px ;  font-style: normal; font-weight: 600; font-size: 30px; margin-top: 4px; margin-left: 30px;  ">
         You Must Know
     </h4>
-    <div class="col-lg-4" style="color: #d02525; padding-top: 20px; width: 200px; height: 150px; border: 3px solid #d02525; border-radius: 20px ">
-        <span style="background-color: #d02525; color: #ffffff"> Bus Fair </span> <br /><span style=" padding-top: 30px;"> Bus Fair kasjdk asdkjaskd asjdndkjn asdkjas dkjbasd </span>
+    <div class="routes" style="margin-top: 50px;">
+        @for (int i = 1; i < 10; i++)
+        {
+            <div class="col-lg-4 panel-group">
+                <div class="panel panel-danger" style="color: #d02525; height: 200px; border: 3px solid #d02525; padding-right: 0px; padding-left: 0px; border-radius: 5px 5px 20px 20px; margin-left: 0px;">
+                    <div style="background-color: #d02525; display: flex; color: #ffffff; " class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse1"> Bus Fair </a>
+                        </h4>
+                    </div>
+                    <div id="collapse1" class="panel-collapse collapse">
+                        <div class="panel-body">Bus Fair kasjdk asdkjaskd asjdndkjn asdkjas dkjbasd</div>
+                    </div>
+                </div>
+            </div>
+
+        }
     </div>
-    <img src="~/assets/bottom.png" style=" width: 1400px; margin-top: 150px; " />
+
+    <h4 style="color: #000000; position: absolute; font-weight: 400; font-size: 30px; margin-top: 760px; margin-left: 30px ;margin-bottom: 0px; ">
+        Why wait at The
+    </h4>
+    <h4 style="color: #D02525; position: absolute; font-weight: 600; font-size: 30px; margin-top: 794px; margin-left: 30px ">
+        Bus stop Ever Again
+    </h4>
+    <a href="#" style="color: #D02525; position: absolute; padding-left: 575px; text-decoration: underline; font-weight: 100; font-size: 25px; margin-top: 894px; margin-left: 30px ">
+        Live Track your bus now
+    </a>
+
+    <img src="~/assets/bottom.png" style=" width: 1400px;   margin-bottom: 100px" />
     <img src="~/assets/logo speedo.png" />
 </div>
