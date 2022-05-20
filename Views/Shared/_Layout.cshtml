@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Speedo Bus Facilitation</title>
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
-
+    <link href="~/StyleSheet1.css" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -25,145 +25,7 @@
     @*Icons Link*@
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
 
-    <style>
 
-        .navbar-fixed-top .navbar-nav > li > a:hover, .navbar-fixed-top .navbar-nav > li > a:focus {
-            background-color: red;
-            color: #FFffff;
-        }
-
-        /*#sidebar .dropdown-menu > li > a:hover, #sidebar .dropdown-menu > li > a:focus {
-            background-color: red;
-            color: #FFffff;
-        }*/
-
-        .navbar-fixed-top .navbar-nav li .dropdown-menu {
-            border: 3px solid red;
-            margin-top: 10px;
-        }
-
-            .navbar-fixed-top .navbar-nav li .dropdown-menu li {
-                margin-top: 10px;
-                padding-left: 4px;
-                padding-right: 4px;
-            }
-
-            .navbar-fixed-top .navbar-nav li .dropdown-menu li {
-            }
-        /*#sidebar li {
-            margin-bottom: 50px;
-            text-decoration: none;
-        }*/
-
-        .navbar-fixed-top .navbar-nav li a {
-            color: #000000;
-            size: 120px;
-            letter-spacing: 2px;
-            text-decoration: none;
-        }
-
-        .navbar-fixed-top .navbar-nav, .navbar-fixed-top {
-            padding-right: 80px;
-            padding-left: 50px;
-        }
-
-        .panel-heading {
-            /*padding: 0px;*/
-            height: 50px;
-        }
-
-        .navbar {
-            position: relative;
-            min-height: 50px;
-            margin-bottom: 0px;
-            border: 0px solid transparent;
-        }
-
-        .navbar-fixed-top .navbar-nav li #live {
-            color: red;
-            size: 120px;
-            letter-spacing: 2px;
-            text-decoration: none;
-        }
-
-            .navbar-fixed-top .navbar-nav li #live:hover, .navbar-fixed-top .navbar-nav li #live:focus {
-                border-bottom: 2px solid white;
-                color: red;
-                background-color: #ffffff;
-                border-bottom: 2px solid red;
-            }
-
-        /*Home Page Css*/
-        body {
-            padding: 0px;
-            margin: 0px;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-        }
-
-        .maintxt {
-            position: relative;
-        }
-
-            .maintxt > img, .overlay-text {
-                position: absolute;
-            }
-
-        .overlay-text {
-            padding: 150px 50px;
-        }
-
-        .dot {
-            height: 120px;
-            width: 120px;
-            margin-right: 20px;
-            margin-bottom: 20px;
-            background-color: white;
-            border: 3px solid #D02525;
-            border-radius: 50%;
-            display: inline-block;
-        }
-
-        .view {
-            color: #D02525;
-        }
-
-            .view:hover, .view:focus {
-                background-color: #D02525;
-                color: #ffffff
-            }
-
-
-
-        .routes {
-            margin-top: 560px;
-            margin-left: 200px;
-            margin-right: 200px;
-            position: absolute;
-        }
-
-        .routes_name {
-            padding-left: 15px;
-        }
-
-        .view {
-            border: 2px solid #d02525;
-            position: relative;
-            width: 255px;
-            height: 57px;
-            text-decoration: none;
-            background: white;
-            border-radius: 100px;
-            margin-top: 1020px;
-            margin-left: 590px;
-        }
-
-        footer .navbar a {
-            text-decoration: none;
-        }
-    </style>
 </head>
 <body>
 
@@ -179,7 +41,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <img src="~/assets/sp bus logo.jpg" style="height: 50px; padding-top: 2px;" />
-                <a href="#" style="color: #10519f; width: 150px; size: 50px">
+                <a href="\Home\Index" style="color: #10519f; width: 150px; size: 50px">
                     Punjab Speedo Bus Services
                 </a>
             </div>
@@ -224,7 +86,7 @@
                     <p style="color: #ffffff">
                         Street number 06 House Number 24 Muslim Gunj Lytton Road, Mozang Lahore - 54000 Pakistan
                         <br />
-                        Email: muhammadrmz871@gmail.com
+                        Email:<b style="text-decoration: underline;">  muhammadrmz871@gmail.com </b>
                         <br />
                         Phone Number: +923244812756
                     </p>
@@ -255,7 +117,7 @@
                 </div>
                 <div class=" col-lg-3 col-lg-push-2">
                     <h4 style="color: #ffffff; padding-top: 80px; ">
-                        <a href="#" style="color: #ffffff; padding-top: 80px; "> Terms and Conditions <br /> Check out the travel guideline </a>
+                        <a href="\Home\Terms" style="color: #ffffff; padding-top: 80px; "> Terms and Conditions <br /> Check out the travel guideline </a>
                     </h4>
                     <p style="color: #ffffff">
                         Copyright © - Muhammad Rameez by Octocat Limited. All Rights Reserved 2022

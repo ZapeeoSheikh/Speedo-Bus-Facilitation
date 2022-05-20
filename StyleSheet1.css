@@ -1,0 +1,156 @@
+﻿
+
+.navbar-fixed-top .navbar-nav > li > a:hover, .navbar-fixed-top .navbar-nav > li > a:focus {
+    background-color: red;
+    color: #FFffff;
+}
+
+.navbar-fixed-top .navbar-nav li .dropdown-menu {
+    border: 3px solid red;
+    margin-top: 10px;
+}
+
+    .navbar-fixed-top .navbar-nav li .dropdown-menu li {
+        margin-top: 10px;
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
+        .navbar-fixed-top .navbar-nav li .dropdown-menu li:hover {
+            background-color: red;
+            color: #ffffff;
+        }
+
+        .navbar-fixed-top .navbar-nav li .dropdown-menu li a:hover {
+            color: red;
+        }
+
+
+.navbar-fixed-top .navbar-nav li a {
+    color: #000000;
+    size: 120px;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+.navbar-fixed-top .navbar-nav, .navbar-fixed-top {
+    padding-right: 80px;
+    padding-left: 50px;
+}
+
+.panel-heading {
+    /*padding: 0px;*/
+    height: 50px;
+}
+
+.navbar {
+    position: relative;
+    height: 55px;
+    min-height: 50px;
+    margin-bottom: 0px;
+    border: 0px solid transparent;
+    box-shadow: 0px 2px 5px grey;
+}
+
+.navbar-fixed-top .navbar-nav li #live {
+    color: red;
+    size: 120px;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+    .navbar-fixed-top .navbar-nav li #live:hover, .navbar-fixed-top .navbar-nav li #live:focus {
+        border-bottom: 2px solid white;
+        color: red;
+        background-color: #ffffff;
+        border-bottom: 2px solid red;
+    }
+
+/*Home Page Css*/
+body {
+    padding: 0px;
+    margin: 0px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.maintxt {
+    position: relative;
+}
+
+    .maintxt > img, .overlay-text {
+        position: absolute;
+    }
+
+.overlay-text {
+    padding: 150px 50px;
+}
+
+.dot {
+    height: 120px;
+    width: 120px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+    border: 3px solid #D02525;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.alldot {
+    height: 150px;
+    width: 150px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+    border: 3px solid #D02525;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.view {
+    color: #D02525;
+}
+
+    .view:hover, .view:focus {
+        background-color: #D02525;
+        color: #ffffff
+    }
+
+
+
+.routes {
+    margin-top: 560px;
+    margin-left: 200px;
+    margin-right: 200px;
+    position: absolute;
+}
+
+.allroutes {
+    margin-top: 60px;
+    margin-left: 80px;
+    margin-right: 0px;
+    position: relative;
+}
+
+.routes_name {
+    padding-left: 15px;
+}
+
+.view {
+    border: 2px solid #d02525;
+    position: relative;
+    width: 255px;
+    height: 57px;
+    text-decoration: none;
+    background: white;
+    border-radius: 100px;
+    margin-top: 1020px;
+    margin-left: 590px;
+}
+
+footer .navbar a {
+    text-decoration: none;
+}
