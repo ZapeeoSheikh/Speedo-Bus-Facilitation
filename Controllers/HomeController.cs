@@ -13,5 +13,13 @@ namespace Speedo_Bus_Facilitation.Controllers
         {
             return View();
         }
+        public ActionResult BusNearMe()
+        {
+            return View();
+        }
+        public ActionResult AllRoutes()
+        {
+            return View();
+        }
     }
 }
