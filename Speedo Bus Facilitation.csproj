@@ -100,13 +100,13 @@
     <Content Include="assets\FR-15.jpg" />
     <Content Include="assets\insta.png" />
     <Content Include="assets\linkedin.png" />
+    <Content Include="assets\location.png" />
     <Content Include="assets\logo speedo.png" />
     <Content Include="assets\mybus-removebg-preview.png" />
     <Content Include="assets\sp bus logo.jpg" />
     <Content Include="assets\speedo bg.jpg" />
     <Content Include="assets\travel easy.png" />
     <Content Include="assets\twitter.png" />
-    <Content Include="assets\locmap.png" />
     <Content Include="assets\world-map.png" />
     <Content Include="assets\youtube.png" />
     <Content Include="Content\bootstrap-theme.css" />
