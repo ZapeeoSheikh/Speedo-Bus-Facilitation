@@ -106,6 +106,7 @@
     <Content Include="assets\speedo bg.jpg" />
     <Content Include="assets\travel easy.png" />
     <Content Include="assets\twitter.png" />
+    <Content Include="assets\locmap.png" />
     <Content Include="assets\world-map.png" />
     <Content Include="assets\youtube.png" />
     <Content Include="Content\bootstrap-theme.css" />
