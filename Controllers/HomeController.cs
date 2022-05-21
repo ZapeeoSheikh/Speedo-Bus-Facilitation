@@ -37,5 +37,17 @@ namespace Speedo_Bus_Facilitation.Controllers
         {
             return View();
         }
+        public ActionResult Recharge()
+        {
+            return View();
+        }
+        public ActionResult Card()
+        {
+            return View();
+        }
+        public ActionResult Token()
+        {
+            return View();
+        }
     }
 }

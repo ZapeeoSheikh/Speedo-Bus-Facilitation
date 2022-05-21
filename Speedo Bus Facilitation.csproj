@@ -154,6 +154,9 @@
     <Content Include="Views\Home\LiveView.cshtml" />
     <Content Include="Views\Home\BusStop.cshtml" />
     <Content Include="Views\Home\Jobs.cshtml" />
+    <Content Include="Views\Home\Recharge.cshtml" />
+    <Content Include="Views\Home\Card.cshtml" />
+    <Content Include="Views\Home\Token.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
