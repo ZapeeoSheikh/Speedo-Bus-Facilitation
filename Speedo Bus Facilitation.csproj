@@ -101,6 +101,7 @@
     <Content Include="assets\insta.png" />
     <Content Include="assets\linkedin.png" />
     <Content Include="assets\location.png" />
+    <Content Include="assets\location2.png" />
     <Content Include="assets\logo speedo.png" />
     <Content Include="assets\mybus-removebg-preview.png" />
     <Content Include="assets\sp bus logo.jpg" />
@@ -152,6 +153,7 @@
     <Content Include="Views\Home\Terms.cshtml" />
     <Content Include="Views\Home\LiveView.cshtml" />
     <Content Include="Views\Home\BusStop.cshtml" />
+    <Content Include="Views\Home\Jobs.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
