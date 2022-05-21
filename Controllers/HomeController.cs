@@ -29,5 +29,9 @@ namespace Speedo_Bus_Facilitation.Controllers
         {
             return View();
         }
+        public ActionResult BusStop()
+        {
+            return View();
+        }
     }
 }

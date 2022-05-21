@@ -1,4 +1,25 @@
 ﻿
+.stopview {
+    color: #FF6151;
+}
+
+    .stopview:hover, .stopview:focus {
+        background-color: #FF6151;
+        color: #ffffff
+    }
+
+.stopview {
+    border: 2px solid #FF6151;
+    position: relative;
+    width: 255px;
+    height: 57px;
+    text-decoration: none;
+    background: white;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 590px;
+}
+
 
 
 .navbar-fixed-top .navbar-nav > li > a:hover, .navbar-fixed-top .navbar-nav > li > a:focus {

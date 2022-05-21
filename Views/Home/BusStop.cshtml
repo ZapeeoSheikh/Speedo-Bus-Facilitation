@@ -1,0 +1,88 @@
+﻿
+@{
+    ViewBag.Title = "BusStop";
+}
+
+<div class="well">
+
+    <img src="~/assets/mybus-removebg-preview.png" style="padding-left: 700px; padding-top: 100px; position: absolute" />
+    <div class="jumbotron text-left" style="padding-left: 50px; padding-top: 150px; height: 500px; background-color: #B5CAF1; color: #10519F ">
+        <img src="~/assets/logo speedo.png" />
+        <h2 style="font-weight: 600"> <i class="fa fa-map-marker" style="color: #F35632 "></i> Speedo Bus Stop </h2>
+        <p>Please select your stop to continue</p>
+        <form class="form-inline">
+            <div class="input-group">
+                <div class="form-group">
+                    <select name="SellerId" class="form-control">
+                        <option value="0">- Please Select Bus Stop -</option>
+
+                        <option value=""> Anarkali </option>
+                        <option value=""> Bhatti Chowk </option>
+                        <option value=""> RA Bazar </option>
+
+                    </select>
+                </div>
+                <div class="input-group-btn" style="color: white">
+                    <button type="button" style="background-color: #F35632;" class="btn "><i class="fa fa-search"></i></button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="input-group col-lg-push-9 col-lg-3">
+        <div class="">
+            <input type="text" style="height: 50px;" class="form-control" size="50" placeholder="Route Name, Route Number, Bus Number" required>
+            <div class="input-group-btn">
+                <button type="button" style="background-color: #FF6151; color: white; width: 50px; height: 50px;" class="btn "><i class="fa fa-search"></i></button>
+            </div>
+        </div>
+    </div>
+
+
+    <div style="margin-top: 30px; ">
+        <div style="margin-bottom: 50px;">
+            <h2 style="color: #FF6151; font-weight: 600; ">
+                Bhatti Chowk - RA Bazar
+                <i class="fa fa-bus " style="padding-left: 60px;padding-right: 10px; font-size: 26px; color: #003e5f"></i>
+                <span style="font-weight: 600; font-size: 25px; color: #003e5f "> Route 250</span>
+            </h2>
+        </div>
+        <table class="table table-fixed table-striped">
+            <thead>
+                <tr>
+                    <th> Type</th>
+                    <th> Route No</th>
+                    <th> Bus No</th>
+                    <th> Route Name </th>
+                    <th> Tracking </th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (int i = 0; i <= 8; i++)
+                {
+                    <tr>
+                        <td><i class="fa fa-bus " style="font-size: 26px; color: #FF6151"></i></td>
+                        <td> Route 250</td>
+                        <td> FR-15</td>
+                        <td><a href="\Home\LiveView" style="color: #003e5f"> Bhatti Chowk - RA Bazar </a></td>
+                        <td><a href="\Home\LiveView" style="color: #003e5f"> Live Track </a></td>
+                    </tr>
+                }
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <th> Type</th>
+                    <th> Route No</th>
+                    <th> Bus No</th>
+                    <th> Route Name </th>
+                    <th> Tracking </th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <button class="stopview" onclick="document.location='\AllRoutes'">
+        View all the Routes
+    </button>
+</div>
+
