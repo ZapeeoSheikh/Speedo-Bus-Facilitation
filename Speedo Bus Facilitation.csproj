@@ -159,6 +159,7 @@
     <Content Include="Views\Home\Recharge.cshtml" />
     <Content Include="Views\Home\Card.cshtml" />
     <Content Include="Views\Home\Token.cshtml" />
+    <Content Include="Views\Home\TravelGuide.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

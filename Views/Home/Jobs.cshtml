@@ -83,7 +83,7 @@
                                     </div>
                                 </div>
                                 <div class="text-center">
-                                    <button type="button" class="applyview ">
+                                    <button type="submit" class="applyview ">
                                         Submit
                                     </button>
                                 </div>
@@ -96,11 +96,11 @@
             </div>
 
 
-            @for (int i = 1; i <= 10; i++)
+            @for (int i = 1; i < 10; i++)
             {
                 <div class="col-lg-4" style="margin-bottom: 50px;">
                     <div style="height: 270px; width: 350px; color: #d02525; border-radius: 10px; box-shadow: 0 0 15px 3px #C8C6C6; padding: 30px">
-                        <h4 style="font-size: 30px; color: black; font-weight: 600"> Accounts Executive</h4>
+                        <h4 style="font-size: 25px; color: black; font-weight: 600"> Accounts Executive</h4>
                         <h4 style="color: grey; font-weight: 400; font-size: 20px"> Lahore</h4>
                         <h4 style="font-size: 25px; color: black; font-weight: 600"> Finance</h4>
                         <button type="button" class="jobview " data-toggle="modal" data-target="#myModal">
@@ -111,23 +111,22 @@
                 </div>
             }
         </div>
-        <div class=" col-lg-12">
-            <div style="margin-top: 2px; " class=" col-lg-4">
-                <h2 style="color: black; font-weight: 600; font-size: 20px" class="text-center">Our Core Purpose</h2>
-                <div style="margin-top: 6px;margin-left: 70px;">
-                    <p style="color: grey; font-size: 17px; ">
-                        Speedo Bus Service core purpose is to make travel better, reliable, and save for everyone.
-                    </p>
-                    <div class="col-lg-4"></div>
-                </div>
-            </div>
+        <div class=" col-lg-push-1 col-lg-11">
 
+            @for (int i = 1; i <= 6; i++)
+            {
+                <div style="margin-top: 2px;" class=" col-lg-6">
+                    <h2 style="color: black; font-weight: 600; font-size: 20px;">
+                        Our Core Purpose
+                    </h2>
+                    <div style="margin-top: 6px;">
+                        <p style="color: grey; font-size: 17px;">
+                            Speedo Bus Service core purpose is to make travel better, reliable, and save for everyone.
+                        </p>
 
-            <div class="col-lg-6">
-                <div style="margin-top: 2px;">
-                    <h2 style="font-weight: 600; font-size: 20px; color: black" class="text-center">Speedo Bus Services</h2>
+                    </div>
                 </div>
-            </div>
+            }
         </div>
     </div>
 

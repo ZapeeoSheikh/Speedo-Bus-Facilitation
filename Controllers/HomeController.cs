@@ -49,5 +49,13 @@ namespace Speedo_Bus_Facilitation.Controllers
         {
             return View();
         }
+        public ActionResult TravelGuide()
+        {
+            return View();
+        }
+        public ActionResult Token()
+        {
+            return View();
+        }
     }
 }
