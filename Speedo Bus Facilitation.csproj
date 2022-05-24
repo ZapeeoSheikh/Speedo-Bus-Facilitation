@@ -96,8 +96,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="assets\bottom.png" />
+    <Content Include="assets\divider.png" />
     <Content Include="assets\fb.png" />
     <Content Include="assets\FR-15.jpg" />
+    <Content Include="assets\guide.jpg" />
     <Content Include="assets\insta.png" />
     <Content Include="assets\linkedin.png" />
     <Content Include="assets\location.png" />

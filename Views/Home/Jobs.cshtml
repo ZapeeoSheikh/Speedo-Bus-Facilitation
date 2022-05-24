@@ -2,58 +2,133 @@
 @{
     ViewBag.Title = "Jobs";
 }
+<div class="job">
+    <div style="margin-top: 120px;">
+        <h2 style="color: black; font-size: 25px" class="text-center">Search For Current Opportunities</h2>
+    </div>
 
-<div style="margin-top: 120px;">
-    <h2 style="color: black; font-size: 25px" class="text-center">Search For Current Opportunities</h2>
-</div>
+    <div style="margin-top: 2px;">
+        <h2 style="font-weight: 600; font-size: 30px; color: #D02525" class="text-center">Speedo Bus Services</h2>
+    </div>
 
-<div style="margin-top: 2px;">
-    <h2 style="font-weight: 600; font-size: 30px; color: #D02525" class="text-center">Speedo Bus Services</h2>
-</div>
+    <div style="display: flex; margin-top: 6px; justify-content: center;">
+        <p style="color: grey; font-size: 17px; " class="col-lg-push-2 col-lg-6">
+            By improving public transportation, we make our city better places to live in, and improve our health and our lives.
 
-<div style="display: flex; margin-top: 6px; justify-content: center;">
-    <p style="color: grey; font-size: 17px; " class="col-lg-push-2 col-lg-6">
-        By improving public transportation, we make our city better places to live in, and improve our health and our lives.
+            If this drives you too, then hop on! <span style="color: #d02525"> Welcome to Speedo Bus Services.</span>
+        </p>
+        <div class="col-lg-4"></div>
+    </div>
 
-        If this drives you too, then hop on! <span style="color: #d02525"> Welcome to Speedo Bus Services.</span>
-    </p>
-    <div class="col-lg-4"></div>
-</div>
+    <div class="col-lg-12">
+        <form class="form-inline text-center col-lg-6 col-lg-push-3" style="margin-top: 20px">
+            <div class="input-group">
+                <div class="form-group">
+                    <select name="" class="form-control" style="height: 50px; width: 350px; border-radius: 50px 0px 0px 50px;">
+                        <option value="0">- All Categories -</option>
 
-<div class="col-lg-12">
-    <form class="form-inline text-center col-lg-6 col-lg-push-3" style="margin-top: 20px">
-        <div class="input-group">
-            <div class="form-group">
-                <select name="" class="form-control" style="height: 50px; width: 350px; border-radius: 50px 0px 0px 50px;">
-                    <option value="0">- All Categories -</option>
+                        <option value=""> Finance </option>
+                        <option value=""> Operations </option>
+                        <option value=""> Technology </option>
+                        <option value=""> Cleanical Staff </option>
 
-                    <option value=""> Finance </option>
-                    <option value=""> Operations </option>
-                    <option value=""> Technology </option>
-                    <option value=""> Cleanical Staff </option>
+                    </select>
+                    <div class="input-group-btn" style="color: white">
+                        <button type="button" style="background-color: #d02525; border-radius: 0px 50px 50px 0px; height: 50px; width: 150px " class="btn "><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="col-lg-3"></div>
+    </div>
 
-                </select>
-                <div class="input-group-btn" style="color: white">
-                    <button type="button" style="background-color: #d02525; border-radius: 0px 50px 50px 0px; height: 50px; width: 150px " class="btn "><i class="fa fa-search"></i></button>
+    <div class="col-lg-12 " style="margin-top: 50px ">
+        <div class="col-lg-push-1 col-lg-10">
+
+
+
+            <!-- Modal -->
+            <div class="modal " id="myModal" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title text-center" style="color: #d02525; font-size: 35px; font-weight: 600">Apply for Job Here</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form id="jobForm" action="" method="post" enctype="multipart/form-data" novalidate="novalidate">
+                                <div class="form-row">
+                                    <div class="col-lg-6">
+                                        <input type="text" placeholder="Name" name="name" required="">
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <input type="email" placeholder="Email ID" name="email" required="">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-lg-6">
+                                        <input type="tel" placeholder="Mobile No." name="mobile" maxlength="10" required="">
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <input type="text" placeholder="Role" name="role" required="">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-lg-12">
+                                        <label class="file">
+                                            <input style="width: 850px;" id="file" type="file" name="" accept=".doc,.docx,.pdf" placeholder="Upload your resume" required="">
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <button type="button" class="applyview ">
+                                        Submit
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            @for (int i = 1; i <= 10; i++)
+            {
+                <div class="col-lg-4" style="margin-bottom: 50px;">
+                    <div style="height: 270px; width: 350px; color: #d02525; border-radius: 10px; box-shadow: 0 0 15px 3px #C8C6C6; padding: 30px">
+                        <h4 style="font-size: 30px; color: black; font-weight: 600"> Accounts Executive</h4>
+                        <h4 style="color: grey; font-weight: 400; font-size: 20px"> Lahore</h4>
+                        <h4 style="font-size: 25px; color: black; font-weight: 600"> Finance</h4>
+                        <button type="button" class="jobview " data-toggle="modal" data-target="#myModal">
+                            Apply Now
+                        </button>
+                    </div>
+
+                </div>
+            }
+        </div>
+        <div class=" col-lg-12">
+            <div style="margin-top: 2px; " class=" col-lg-4">
+                <h2 style="color: black; font-weight: 600; font-size: 20px" class="text-center">Our Core Purpose</h2>
+                <div style="margin-top: 6px;margin-left: 70px;">
+                    <p style="color: grey; font-size: 17px; ">
+                        Speedo Bus Service core purpose is to make travel better, reliable, and save for everyone.
+                    </p>
+                    <div class="col-lg-4"></div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-6">
+                <div style="margin-top: 2px;">
+                    <h2 style="font-weight: 600; font-size: 20px; color: black" class="text-center">Speedo Bus Services</h2>
                 </div>
             </div>
         </div>
-    </form>
-    <div class="col-lg-3"></div>
-</div>
-
-<div class="col-lg-12 " style="margin-top: 50px ">
-    <div class="col-lg-push-1 col-lg-10">
-        @for (int i = 1; i <= 10; i++)
-        {
-            <div class="col-lg-4" style="margin-bottom: 50px;">
-                <div style="height: 270px; width: 350px; color: #d02525; border-radius: 10px; box-shadow: 0 0 15px 3px #C8C6C6; padding: 30px">
-                    <h4 style="font-size: 30px; color: black; font-weight: 600"> Accounts Executive</h4>
-                    <h4 style="color: grey; font-weight: 400; font-size: 20px"> Lahore</h4>
-                    <h4 style="font-size: 25px; color: black; font-weight: 600"> Finance</h4>
-                </div>
-            </div>
-        }
     </div>
-    <div class="col-lg-2"></div>
+
 </div>
