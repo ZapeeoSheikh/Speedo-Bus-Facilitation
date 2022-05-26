@@ -20,9 +20,9 @@ namespace Speedo_Bus_Facilitation.Models
             modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
         }
 
-        public DbSet<Bus_Attendent> attendent { get; set; }
-        public DbSet<Bus_Card> card { get; set; }
-        public DbSet<Bus_Stop> busStop { get; set; }
+        public DbSet<BusAttendent> attendent { get; set; }
+        public DbSet<BusCard> card { get; set; }
+        public DbSet<BusStop> busStop { get; set; }
         public DbSet<Stop> stop { get; set; }
         public DbSet<Bus> bus { get; set; }
         public DbSet<Direction> direction { get; set; }
