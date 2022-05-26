@@ -151,6 +151,8 @@
     <Compile Include="Models\Line.cs" />
     <Compile Include="Models\Passenger.cs" />
     <Compile Include="Models\Route.cs" />
+    <Compile Include="Models\SpeedoContext.cs" />
+    <Compile Include="Models\Stop.cs" />
     <Compile Include="Models\Token.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
