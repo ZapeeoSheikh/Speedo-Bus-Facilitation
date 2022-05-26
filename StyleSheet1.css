@@ -167,7 +167,7 @@ body {
 .alldot {
     height: 150px;
     width: 150px;
-    margin-right: 20px;
+    margin-right: 50px;
     margin-bottom: 20px;
     background-color: white;
     border: 3px solid #D02525;
@@ -193,7 +193,7 @@ body {
 
 .allroutes {
     margin-top: 60px;
-    margin-left: 80px;
+    margin-left: 0px;
     margin-right: 0px;
     position: relative;
 }
