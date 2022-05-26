@@ -32,5 +32,6 @@ namespace Speedo_Bus_Facilitation.Models
         public DbSet<Passenger> passenger { get; set; }
         public DbSet<Route> routes { get; set; }
         public DbSet<Token> token { get; set; }
+        public DbSet<Balance> balance { get; set; }
     }
 }

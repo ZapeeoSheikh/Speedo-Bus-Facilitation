@@ -5,11 +5,11 @@ using System.Web;
 
 namespace Speedo_Bus_Facilitation.Models
 {
-    public class Token
+    public class Balance
     {
         public int Id { get; set; }
-        public int Number { get; set; }
-        public DateTime ValidTime { get; set; }
-        public int Price { get; set; }
+        public virtual BusCard card { get; set; }
+        public int cardId { get; set; }
+        public int BalanceHistory { get; set; }
     }
 }
