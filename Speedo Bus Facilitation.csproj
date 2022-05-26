@@ -141,9 +141,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Bus Attendent.cs" />
-    <Compile Include="Models\Bus Card.cs" />
-    <Compile Include="Models\Bus Stop.cs" />
+    <Compile Include="Models\BusAttendent.cs" />
+    <Compile Include="Models\BusCard.cs" />
+    <Compile Include="Models\BusStop.cs" />
     <Compile Include="Models\Bus.cs" />
     <Compile Include="Models\Direction.cs" />
     <Compile Include="Models\Driver.cs" />
