@@ -12,6 +12,8 @@ namespace Speedo_Bus_Facilitation.Models
         public string CurrentStop { get; set; }
         public string NextStop { get; set; }
         public string PrevStop { get; set; }
+        public virtual Route route { get; set; }
+        public string routeId { get; set; }
 
     }
 }

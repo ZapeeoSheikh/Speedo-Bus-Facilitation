@@ -9,6 +9,7 @@ namespace Speedo_Bus_Facilitation.Models
     {
         public int Id { get; set; }
         public String Names { get; set; }
-        public int StopNo { get; set; }
+        public int StopNumber { get; set; }
+        public int NumberOfStops { get; set; }
     }
 }
