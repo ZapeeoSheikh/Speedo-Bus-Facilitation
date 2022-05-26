@@ -141,6 +141,17 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Bus Attendent.cs" />
+    <Compile Include="Models\Bus Card.cs" />
+    <Compile Include="Models\Bus Stop.cs" />
+    <Compile Include="Models\Bus.cs" />
+    <Compile Include="Models\Direction.cs" />
+    <Compile Include="Models\Driver.cs" />
+    <Compile Include="Models\Jobs.cs" />
+    <Compile Include="Models\Line.cs" />
+    <Compile Include="Models\Passenger.cs" />
+    <Compile Include="Models\Route.cs" />
+    <Compile Include="Models\Token.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -170,7 +181,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -3,5 +3,35 @@
     ViewBag.Title = "TravelGuide";
 }
 
-<h2>TravelGuide</h2>
+<div style="margin-top: 140px;">
+    <h2 style="color: black; font-size: 40px; " class="text-center">Travel Guide About </h2>
+</div>
 
+<div style="margin-top: 2px;">
+    <h2 style="font-weight: 600; font-size: 45px; color: #D02525; " class="text-center">Speedo Bus Services  </h2>
+</div>
+
+@for (int ii = 1; ii <= 3; ii++)
+{
+    <div class="" style="margin-top: 50px; margin-right: 150px; margin-left: 150px; margin-bottom: 50px; padding-right: 0px; padding-left: 0px; display: flex; justify-content: center;">
+        @for (int i = 1; i <= 3; i++)
+        {
+            <div class=" guide" style="padding: 40px; margin-right: 20px;">
+
+                <h4 class="head4">
+                    <i class="fa fa-money"></i> &nbsp; Bus Fair
+                </h4>
+                <p class="para">
+                    The cost of Speedo Single side travel is 20Rs But if you have a card you will be charge 15Rs for single side. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                </p>
+                <a href="\Home\TravelGuide" class="parabutton">
+                    Read More about travel guidelines
+                </a>
+            </div>
+
+        }
+
+
+
+    </div>
+}

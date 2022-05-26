@@ -193,7 +193,7 @@ body {
 
 .allroutes {
     margin-top: 60px;
-    margin-left: 0px;
+    margin-left: 50px;
     margin-right: 0px;
     position: relative;
 }
@@ -256,4 +256,15 @@ body {
 
 footer .navbar a {
     text-decoration: none;
+}
+
+
+.tguide:hover {
+    font-size: 18px;
+    color: #D02525;
+}
+
+.tguide {
+    font-size: 20px;
+    color: #003e5f;
 }
