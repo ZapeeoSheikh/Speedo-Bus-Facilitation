@@ -53,6 +53,10 @@ namespace Speedo_Bus_Facilitation.Controllers
         {
             return View();
         }
+        public ActionResult Route()
+        {
+            return View();
+        }
 
     }
 }
