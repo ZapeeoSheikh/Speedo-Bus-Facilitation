@@ -141,16 +141,18 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Balance.cs" />
+    <Compile Include="Models\BalanceHistory.cs" />
     <Compile Include="Models\BusAttendent.cs" />
     <Compile Include="Models\BusCard.cs" />
     <Compile Include="Models\BusStop.cs" />
     <Compile Include="Models\Bus.cs" />
+    <Compile Include="Models\Depot.cs" />
     <Compile Include="Models\Direction.cs" />
     <Compile Include="Models\Driver.cs" />
     <Compile Include="Models\Jobs.cs" />
     <Compile Include="Models\Line.cs" />
     <Compile Include="Models\Passenger.cs" />
+    <Compile Include="Models\Role.cs" />
     <Compile Include="Models\Route.cs" />
     <Compile Include="Models\SpeedoContext.cs" />
     <Compile Include="Models\Stop.cs" />

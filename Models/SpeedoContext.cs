@@ -23,6 +23,8 @@ namespace Speedo_Bus_Facilitation.Models
         public DbSet<BusAttendent> attendent { get; set; }
         public DbSet<BusCard> card { get; set; }
         public DbSet<BusStop> busStop { get; set; }
+        public DbSet<Depot> depot { get; set; }
+        public DbSet<Role> role { get; set; }
         public DbSet<Stop> stop { get; set; }
         public DbSet<Bus> bus { get; set; }
         public DbSet<Direction> direction { get; set; }
@@ -32,6 +34,6 @@ namespace Speedo_Bus_Facilitation.Models
         public DbSet<Passenger> passenger { get; set; }
         public DbSet<Route> routes { get; set; }
         public DbSet<Token> token { get; set; }
-        public DbSet<Balance> balance { get; set; }
+        public DbSet<BalanceHistory> balance { get; set; }
     }
 }
