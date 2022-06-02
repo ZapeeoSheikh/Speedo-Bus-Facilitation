@@ -12,7 +12,5 @@ namespace Speedo_Bus_Facilitation.Models
         public int Limit { get; set; }
         public DateTime CheckIn { get; set; }
         public DateTime CheckOut { get; set; }
-        public virtual BalanceHistory balance { get; set; }
-        public int balanceId { get; set; }
     }
 }

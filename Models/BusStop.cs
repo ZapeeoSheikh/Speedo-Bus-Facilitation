@@ -10,13 +10,11 @@ namespace Speedo_Bus_Facilitation.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public virtual Bus bus { get; set; }
-        public int busId { get; set; }
-        public virtual BusCard card { get; set; }
-        public int cardId { get; set; }
-        public virtual Stop stop { get; set; }
-        public int stopId { get; set; }
+        //public int busId { get; set; }
         public virtual Route route { get; set; }
-        public int routeId { get; set; }
+        //public int routeId { get; set; }
+        //public virtual Bus_BusStop BusBusStop { get; set; }
+        //public int BusBusStopId { get; set; }
 
     }
 }

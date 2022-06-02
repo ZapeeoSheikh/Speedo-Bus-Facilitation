@@ -1,4 +1,5 @@
-﻿
+﻿@using Speedo_Bus_Facilitation.Models
+@model List<BusStop>
 @{
     ViewBag.Title = "BusStop";
 }
@@ -16,18 +17,12 @@
                     <select name="" class="form-control">
                         <option value="0">- Please Select Bus Stop -</option>
 
-                        <option value=""> Anarkali </option>
-                        <option value=""> Anarkali </option>
-                        <option value=""> Anarkali </option>
-                        <option value=""> Anarkali </option>
-                        <option value=""> Anarkali </option>
-                        <option value=""> Anarkali </option>
-                        <option value=""> Anarkali </option>
-                        <option value=""> Anarkali </option>
-                        <option value=""> Anarkali </option>
-                        <option value=""> Anarkali </option>
-                        <option value=""> Bhatti Chowk </option>
-                        <option value=""> RA Bazar </option>
+                        @foreach (var i in Model)
+                        {
+                            <option value="@i.Id"> @i.Name </option>
+
+                        }
+
 
                     </select>
                 </div>
@@ -66,14 +61,14 @@
                 </tr>
             </thead>
             <tbody>
-                @for (int i = 0; i <= 8; i++)
+                @foreach (var i in Model)
                 {
                     <tr>
                         <td><i class="fa fa-bus " style="font-size: 26px; color: #FF6151"></i></td>
-                        <td> Route 250</td>
-                        <td> FR-15</td>
-                        <td><a href="\Home\LiveView" style="color: #003e5f"> Bhatti Chowk - RA Bazar </a></td>
-                        <td><a href="\Home\LiveView" style="color: #003e5f"> Live Track </a></td>
+                        <td> FR-@i.route.Number</td>
+                        <td> F-@i.bus.No</td>
+                        <td><a href="\Home\LiveView\@i.route.Id" style="color: #003e5f"> @i.route.Name </a></td>
+                        <td><a href="\Home\LiveView\@i.bus.Id" style="color: #003e5f"> Live Track </a></td>
                     </tr>
                 }
             </tbody>

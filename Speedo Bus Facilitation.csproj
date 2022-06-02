@@ -141,7 +141,29 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202206022035202_test.cs" />
+    <Compile Include="Migrations\202206022035202_test.designer.cs">
+      <DependentUpon>202206022035202_test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206022036567_test2.cs" />
+    <Compile Include="Migrations\202206022036567_test2.designer.cs">
+      <DependentUpon>202206022036567_test2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206022038156_t3.cs" />
+    <Compile Include="Migrations\202206022038156_t3.designer.cs">
+      <DependentUpon>202206022038156_t3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206022154127_t5.cs" />
+    <Compile Include="Migrations\202206022154127_t5.designer.cs">
+      <DependentUpon>202206022154127_t5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206022156598_t51.cs" />
+    <Compile Include="Migrations\202206022156598_t51.designer.cs">
+      <DependentUpon>202206022156598_t51.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BalanceHistory.cs" />
+    <Compile Include="Models\Bus-BusStop.cs" />
     <Compile Include="Models\BusAttendent.cs" />
     <Compile Include="Models\BusCard.cs" />
     <Compile Include="Models\BusStop.cs" />
@@ -186,6 +208,23 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202206022035202_test.resx">
+      <DependentUpon>202206022035202_test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206022036567_test2.resx">
+      <DependentUpon>202206022036567_test2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206022038156_t3.resx">
+      <DependentUpon>202206022038156_t3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206022154127_t5.resx">
+      <DependentUpon>202206022154127_t5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206022156598_t51.resx">
+      <DependentUpon>202206022156598_t51.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

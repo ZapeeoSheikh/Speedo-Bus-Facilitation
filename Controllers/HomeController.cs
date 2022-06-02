@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Speedo_Bus_Facilitation.Models;
 
 namespace Speedo_Bus_Facilitation.Controllers
 {
     public class HomeController : Controller
     {
+        SpeedoContext db = new SpeedoContext();
         // GET: Home
         public ActionResult Index()
         {
@@ -31,7 +33,9 @@ namespace Speedo_Bus_Facilitation.Controllers
         }
         public ActionResult BusStop()
         {
-            return View();
+            List<BusStop> busStops = db.busStop.ToList();
+            return View(busStops);
+
         }
         public ActionResult Jobs()
         {

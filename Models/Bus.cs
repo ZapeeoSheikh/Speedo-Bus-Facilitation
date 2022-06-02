@@ -12,7 +12,6 @@ namespace Speedo_Bus_Facilitation.Models
         public string Start { get; set; }
         public string End { get; set; }
         public int TotalStops { get; set; }
-        public virtual BusStop busStop { get; set; }
-        public int busStopId { get; set; }
+
     }
 }
