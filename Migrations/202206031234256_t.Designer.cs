@@ -7,13 +7,13 @@ namespace Speedo_Bus_Facilitation.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class t5 : IMigrationMetadata
+    public sealed partial class t : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(t5));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(t));
         
         string IMigrationMetadata.Id
         {
-            get { return "202206022154127_t5"; }
+            get { return "202206031234256_t"; }
         }
         
         string IMigrationMetadata.Source
