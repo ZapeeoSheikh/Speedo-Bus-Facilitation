@@ -29,14 +29,15 @@ namespace Speedo_Bus_Facilitation.Controllers
         {
             return View();
         }
-        public ActionResult LiveView()
+        public ActionResult LiveView(int Id)
         {
-            return View();
+            Bus_BusStop busBusStop = db.BusBusStops.Where(x => x.Id == Id).FirstOrDefault();
+            return View(busBusStop);
         }
         public ActionResult BusStop()
         {
-            List<BusStop> busStops = db.busStop.ToList();
-            return View(busStops);
+            List<Bus_BusStop> Bus_busStops = db.BusBusStops.ToList();
+            return View(Bus_busStops);
 
         }
         public ActionResult Jobs()

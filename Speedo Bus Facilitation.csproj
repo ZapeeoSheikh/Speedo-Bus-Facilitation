@@ -97,7 +97,13 @@
   <ItemGroup>
     <Content Include="assets\bottom.png" />
     <Content Include="assets\fb.png" />
-    <Content Include="assets\FR-15.jpg" />
+    <Content Include="assets\routes\FR-9 .jpg" />
+    <Content Include="assets\routes\FR-10 .jpg" />
+    <Content Include="assets\routes\FR-11 .jpg" />
+    <Content Include="assets\routes\FR-12 .jpg" />
+    <Content Include="assets\routes\FR-13 .jpg" />
+    <Content Include="assets\routes\FR-14 .jpg" />
+    <Content Include="assets\routes\FR-15 .jpg" />
     <Content Include="assets\guide.jpg" />
     <Content Include="assets\divider.png" />
     <Content Include="assets\insta.png" />
@@ -106,6 +112,15 @@
     <Content Include="assets\location2.png" />
     <Content Include="assets\logo speedo.png" />
     <Content Include="assets\mybus-removebg-preview.png" />
+    <Content Include="assets\routes\FR-16 .jpg" />
+    <Content Include="assets\routes\FR-17 .jpg" />
+    <Content Include="assets\routes\FR-2 .jpg" />
+    <Content Include="assets\routes\FR-3 .jpg" />
+    <Content Include="assets\routes\FR-4 .jpg" />
+    <Content Include="assets\routes\FR-5 .jpg" />
+    <Content Include="assets\routes\FR-6 .jpg" />
+    <Content Include="assets\routes\FR-7 .jpg" />
+    <Content Include="assets\routes\FR-8 .jpg" />
     <Content Include="assets\sp bus logo.jpg" />
     <Content Include="assets\speedo bg.jpg" />
     <Content Include="assets\travel easy.png" />
@@ -161,6 +176,7 @@
     <Compile Include="Models\BalanceHistory.cs" />
     <Compile Include="Models\BusAttendent.cs" />
     <Compile Include="Models\BusCard.cs" />
+    <Compile Include="Models\BusNumber.cs" />
     <Compile Include="Models\BusStop.cs" />
     <Compile Include="Models\Bus.cs" />
     <Compile Include="Models\Depot.cs" />
