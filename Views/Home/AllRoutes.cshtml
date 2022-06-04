@@ -1,4 +1,4 @@
-﻿@model List<Speedo_Bus_Facilitation.Models.BusStop>
+﻿@model List<Speedo_Bus_Facilitation.Models.Route>
 @{
     ViewBag.Title = "AllRoutes";
 }
@@ -19,14 +19,16 @@
     <div class="col-lg-4"></div>
 </div>
 
-<div class="allroutes col-lg-12 " style="margin-left: 0px; padding-left: 30px; padding-right: 0px;">
-    @foreach (var i in Model)
-    {
-        <a href="\Home\Route\@i.Id" class="col-lg-2" style="padding-left: 0px; padding-right: 0px;">
-            <span class="alldot "style="margin-right: 0px;">
-                <span style="color: #d02525; display: flex; font-family: cursive; font-size: 14px; font-weight: 600; justify-content: center; margin-top: 55px; padding-left: 20px; padding-right: 20px;">@i.Name</span>
-            </span>
-        </a>
-    }
+<div style="padding-left: 130px; padding-right: 0px;">
+    <div class="allroutes col-lg-12 " style="margin-left: 0px; ">
+        @foreach (var i in Model)
+        {
+            <a href="\Home\Route\@i.Id" class="col-lg-2" style="padding-left: 0px; padding-right: 0px;">
+                <span class="alldot " style="margin-right: 0px;">
+                    <span style="color: #d02525; display: flex; font-family: cursive; font-size: 14px; font-weight: 600; justify-content: center; margin-top: 45px; padding-left: 30px; padding-right: 20px;">@i.Name</span>
+                </span>
+            </a>
+        }
 
+    </div>
 </div>

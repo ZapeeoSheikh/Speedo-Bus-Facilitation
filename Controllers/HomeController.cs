@@ -22,8 +22,8 @@ namespace Speedo_Bus_Facilitation.Controllers
         }
         public ActionResult AllRoutes()
         {
-            List<BusStop> busStops = db.busStop.ToList();
-            return View(busStops);
+            List<Route> routes = db.routes.ToList();
+            return View(routes);
         }
         public ActionResult Terms()
         {
@@ -61,7 +61,8 @@ namespace Speedo_Bus_Facilitation.Controllers
         }
         public ActionResult Route(int Id)
         {
-            return View();
+            Route route = db.routes.Where(x => x.Id == Id).FirstOrDefault();
+            return View(route);
         }
 
     }
