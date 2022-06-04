@@ -1,5 +1,5 @@
 ﻿@using Speedo_Bus_Facilitation.Models
-@model Bus
+@model List<HomeRoutes>
 
 @{
     ViewBag.Title = "Home ";
@@ -46,9 +46,9 @@
 
     <div style=" ">
         <div class="routes " style="margin-left: 250px; margin-right: 200px">
-            @for (int i = 1; i <= 16; i++)
+            @foreach(var i in Model)
             {
-                <span class="dot "></span>
+                <span class="dot "><span style="display: flex; justify-content: center; margin-top: 45px; color: #d02525; font-family:cursive;  font-weight: 600; font-size: 12px">@i.busStop.Name</span></span>
             }
         </div>
     </div>

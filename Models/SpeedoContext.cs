@@ -23,9 +23,10 @@ namespace Speedo_Bus_Facilitation.Models
         public DbSet<BusAttendent> attendent { get; set; }
         public DbSet<BusCard> card { get; set; }
         public DbSet<BusStop> busStop { get; set; }
+        public DbSet<HomeRoutes> HomeRoutes { get; set; }
         public DbSet<Depot> depot { get; set; }
         public DbSet<Role> role { get; set; }
-        public DbSet<Stop> stop { get; set; }
+        public DbSet<Bus_BusStop> BusBusStops { get; set; }
         public DbSet<Bus> bus { get; set; }
         public DbSet<Direction> direction { get; set; }
         public DbSet<Driver> driver { get; set; }

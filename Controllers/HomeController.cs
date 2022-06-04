@@ -13,7 +13,8 @@ namespace Speedo_Bus_Facilitation.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            return View();
+            List<HomeRoutes> homeRoute = db.HomeRoutes.ToList();
+            return View(homeRoute);
         }
         public ActionResult BusNearMe()
         {
@@ -21,7 +22,8 @@ namespace Speedo_Bus_Facilitation.Controllers
         }
         public ActionResult AllRoutes()
         {
-            return View();
+            List<BusStop> busStops = db.busStop.ToList();
+            return View(busStops);
         }
         public ActionResult Terms()
         {
@@ -57,7 +59,7 @@ namespace Speedo_Bus_Facilitation.Controllers
         {
             return View();
         }
-        public ActionResult Route()
+        public ActionResult Route(int Id)
         {
             return View();
         }

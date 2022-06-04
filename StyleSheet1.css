@@ -167,12 +167,21 @@ body {
 .alldot {
     height: 150px;
     width: 150px;
-    margin-right: 50px;
     margin-bottom: 20px;
     background-color: white;
     border: 3px solid #D02525;
-    border-radius: 50%;
     display: inline-block;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 0px;
+    justify-content: center;
+}
+
+.allroutes {
+    margin-left: 0px;
+    margin-top: 60px;
+    margin-right: 0px;
+    position: relative;
 }
 
 .view {
@@ -191,12 +200,6 @@ body {
     position: absolute;
 }
 
-.allroutes {
-    margin-top: 60px;
-    margin-left: 50px;
-    margin-right: 0px;
-    position: relative;
-}
 
 .routes_name {
     padding-left: 15px;

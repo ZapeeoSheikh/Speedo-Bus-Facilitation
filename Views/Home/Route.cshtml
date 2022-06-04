@@ -1,4 +1,5 @@
-﻿
+﻿@using Speedo_Bus_Facilitation.Models
+@model Speedo_Bus_Facilitation.Models.Route
 @{
     ViewBag.Title = "Route";
 }
@@ -19,7 +20,7 @@
     <tbody style="color: #d02525">
         <tr>
             <td rowspan="3" class="col-lg-2">FR-15</td>
-            <td class="col-lg-2">10 Km</td>
+            <td class="col-lg-2">@Model.Distance</td>
             <td class="col-lg-3">F100, F200, F300</td>
             <td class="col-lg-5">Bhatti Chowk, Katchari, Nasir Bagh, Civil Secretariat, Mao College, Anarkali Metro Station, Janazgah, Qartaba Chowk </td>
         </tr>

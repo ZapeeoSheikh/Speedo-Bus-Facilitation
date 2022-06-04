@@ -145,6 +145,18 @@
     <Compile Include="Migrations\202206031234256_t.designer.cs">
       <DependentUpon>202206031234256_t.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202206041744429_t5.cs" />
+    <Compile Include="Migrations\202206041744429_t5.designer.cs">
+      <DependentUpon>202206041744429_t5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206041746417_t51.cs" />
+    <Compile Include="Migrations\202206041746417_t51.designer.cs">
+      <DependentUpon>202206041746417_t51.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206041901196_t52.cs" />
+    <Compile Include="Migrations\202206041901196_t52.designer.cs">
+      <DependentUpon>202206041901196_t52.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BalanceHistory.cs" />
     <Compile Include="Models\BusAttendent.cs" />
@@ -154,13 +166,14 @@
     <Compile Include="Models\Depot.cs" />
     <Compile Include="Models\Direction.cs" />
     <Compile Include="Models\Driver.cs" />
+    <Compile Include="Models\HomeRoutes.cs" />
     <Compile Include="Models\Jobs.cs" />
     <Compile Include="Models\Line.cs" />
     <Compile Include="Models\Passenger.cs" />
     <Compile Include="Models\Role.cs" />
     <Compile Include="Models\Route.cs" />
     <Compile Include="Models\SpeedoContext.cs" />
-    <Compile Include="Models\Stop.cs" />
+    <Compile Include="Models\Bus BusStop.cs" />
     <Compile Include="Models\Token.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -195,6 +208,15 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202206031234256_t.resx">
       <DependentUpon>202206031234256_t.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206041744429_t5.resx">
+      <DependentUpon>202206041744429_t5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206041746417_t51.resx">
+      <DependentUpon>202206041746417_t51.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206041901196_t52.resx">
+      <DependentUpon>202206041901196_t52.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
