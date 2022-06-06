@@ -31,8 +31,8 @@ namespace Speedo_Bus_Facilitation.Controllers
         }
         public ActionResult LiveView(int Id)
         {
-            Bus_BusStop busBusStop = db.BusBusStops.Where(x => x.Id == Id).FirstOrDefault();
-            return View(busBusStop);
+            Route route = db.routes.Where(x => x.Id == Id).FirstOrDefault();
+            return View(route);
         }
         public ActionResult BusStop()
         {

@@ -172,11 +172,15 @@
     <Compile Include="Migrations\202206041901196_t52.designer.cs">
       <DependentUpon>202206041901196_t52.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202206062044364_t53.cs" />
+    <Compile Include="Migrations\202206062044364_t53.designer.cs">
+      <DependentUpon>202206062044364_t53.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BalanceHistory.cs" />
     <Compile Include="Models\BusAttendent.cs" />
     <Compile Include="Models\BusCard.cs" />
-    <Compile Include="Models\BusNumber.cs" />
+    <Compile Include="Models\Bus-Route.cs" />
     <Compile Include="Models\BusStop.cs" />
     <Compile Include="Models\Bus.cs" />
     <Compile Include="Models\Depot.cs" />
@@ -233,6 +237,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202206041901196_t52.resx">
       <DependentUpon>202206041901196_t52.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206062044364_t53.resx">
+      <DependentUpon>202206062044364_t53.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

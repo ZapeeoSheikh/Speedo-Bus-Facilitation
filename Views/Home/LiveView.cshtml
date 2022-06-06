@@ -1,5 +1,5 @@
 ﻿@using Speedo_Bus_Facilitation.Models
-@model Bus_BusStop
+@model Speedo_Bus_Facilitation.Models.Route
 @{
     ViewBag.Title = "LiveTrack";
 }
@@ -39,30 +39,30 @@
 
     <div>
         <h2 style="color: #003e5f; font-weight: 600;">
-            @Model.BusStop.Name
-            [<span style="font-weight: 600; font-size: 25px; color: #d02525"> FR - @Model.BusStop.route.Number </span>]
+            @Model.Name
+            [<span style="font-weight: 600; font-size: 25px; color: #d02525"> FR - @Model.Number </span>]
             <i class="fa fa-bus " style="padding-left: 60px; padding-right: 10px; font-size: 26px; color: #003e5f"></i>
-            <span style="font-weight: 600; font-size: 25px"> Bus F @Model.bus.No</span>
+            <span style="font-weight: 600; font-size: 25px"> Bus F @Model.Number</span>
         </h2>
     </div>
 
 
     <div class="col-lg-12" style="margin-top: 20px;">
         <div class="well col-lg-3" style="color: black; font-size: 20px; margin-left: 20px">
-            <span style="color: #d02525; font-weight: 600;">Previous Stop : </span><br /> @Model.bus.Start
+            <span style="color: #d02525; font-weight: 600;">Previous Stop : </span><br /> @Model.Distance
         </div>
         <div class="well col-lg-3" style="color: black; font-size: 20px; margin-left: 20px">
             <span style="color: #d02525; font-weight: 600;">Current Stop : </span><br /> Nasir Bagh
         </div>
         <div class="well col-lg-3" style="color: black; font-size: 20px; margin-left: 20px">
-            <span style="color: #d02525; font-weight: 600;">Next Stop : </span><br /> @Model.bus.End
+            <span style="color: #d02525; font-weight: 600;">Next Stop : </span><br /> @Model.Distance
         </div>
 
 
     </div>
 
     
-    <img src="~/assets/routes/FR-@Model.busStopId .jpg" height="970px" style="margin-top: 20px" /> @*Ya Change hoga or live map aay ga*@
+    <img src="~/assets/routes/FR-@Model.Id .jpg" height="970px" style="margin-top: 20px" /> @*Ya Change hoga or live map aay ga*@
 </div>
 
 

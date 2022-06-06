@@ -20,7 +20,7 @@
 
                         @foreach (var i in Model)
                         {
-                            <option value="@i.busStopId"> @i.BusStop.Name </option>
+                            <option value="@i.Id"> @i.BusStop.Name </option>
 
                         }
 
@@ -58,6 +58,7 @@
                     <th> Route No</th>
                     <th> Bus No</th>
                     <th> Route Name </th>
+                    <th> Estimate Arrival  </th>
                     <th> Tracking </th>
                 </tr>
             </thead>
@@ -68,8 +69,9 @@
                     <td><i class="fa fa-bus " style="font-size: 26px; color: #FF6151"></i></td>
                     <td> FR-@i.BusStop.route.Number</td>
                     <td> F-@i.bus.No</td>
-                    <td><a href="\Home\LiveView\@i.busStopId" style="color: #003e5f"> @i.BusStop.Name </a></td>
-                    <td><a href="\Home\LiveView\@i.busStopId" style="color: #003e5f"> Live Track </a></td>
+                    <td><a href="\Home\LiveView\@i.BusStop.route.Number" style="color: #003e5f"> @i.BusStop.Name </a></td>
+                    <td> 2mins </td>
+                    <td><a href="\Home\LiveView\@i.BusStop.route.Number" style="color: #003e5f"> Live Track </a></td>
                 </tr>
             }
             </tbody>
@@ -80,6 +82,7 @@
                     <th> Route No</th>
                     <th> Bus No</th>
                     <th> Route Name </th>
+                    <th> Estimate Arrival </th>
                     <th> Tracking </th>
                 </tr>
             </tfoot>

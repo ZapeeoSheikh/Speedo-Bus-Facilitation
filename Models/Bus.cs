@@ -13,5 +13,6 @@ namespace Speedo_Bus_Facilitation.Models
         public string End { get; set; }
         public int TotalStops { get; set; }
 
+
     }
 }
