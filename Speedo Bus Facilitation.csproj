@@ -176,6 +176,10 @@
     <Compile Include="Migrations\202206062044364_t53.designer.cs">
       <DependentUpon>202206062044364_t53.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202206062055558_t54.cs" />
+    <Compile Include="Migrations\202206062055558_t54.designer.cs">
+      <DependentUpon>202206062055558_t54.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BalanceHistory.cs" />
     <Compile Include="Models\BusAttendent.cs" />
@@ -240,6 +244,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202206062044364_t53.resx">
       <DependentUpon>202206062044364_t53.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206062055558_t54.resx">
+      <DependentUpon>202206062055558_t54.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
