@@ -180,6 +180,14 @@
     <Compile Include="Migrations\202206062055558_t54.designer.cs">
       <DependentUpon>202206062055558_t54.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202206081823457_t6.cs" />
+    <Compile Include="Migrations\202206081823457_t6.designer.cs">
+      <DependentUpon>202206081823457_t6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206081935202_t61.cs" />
+    <Compile Include="Migrations\202206081935202_t61.designer.cs">
+      <DependentUpon>202206081935202_t61.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BalanceHistory.cs" />
     <Compile Include="Models\BusAttendent.cs" />
@@ -247,6 +255,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202206062055558_t54.resx">
       <DependentUpon>202206062055558_t54.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206081823457_t6.resx">
+      <DependentUpon>202206081823457_t6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206081935202_t61.resx">
+      <DependentUpon>202206081935202_t61.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

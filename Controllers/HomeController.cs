@@ -36,13 +36,14 @@ namespace Speedo_Bus_Facilitation.Controllers
         }
         public ActionResult BusStop()
         {
-            List<Bus_BusStop> Bus_busStops = db.BusBusStops.ToList();
-            return View(Bus_busStops);
+            List<BusStop> busStops = db.busStop.ToList();
+            return View(busStops);
 
         }
         public ActionResult Jobs()
         {
-            return View();
+            List<Jobs> jobs = db.jobs.ToList();
+            return View(jobs);
         }
         public ActionResult Recharge()
         {
