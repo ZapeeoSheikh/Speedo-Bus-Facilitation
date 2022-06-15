@@ -10,6 +10,7 @@ namespace Speedo_Bus_Facilitation.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public virtual Bus_Route BusRoute { get; set; }
+        public virtual Bus Bus { get; set; }
 
     }
 }

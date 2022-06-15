@@ -36,8 +36,8 @@ namespace Speedo_Bus_Facilitation.Controllers
         }
         public ActionResult BusStop()
         {
-            List<BusStop> busStops = db.busStop.ToList();
-            return View(busStops);
+            List<Bus_BusStop> BusbusStops = db.BusBusStops.ToList();
+            return View(BusbusStops);
 
         }
         public ActionResult Jobs()
