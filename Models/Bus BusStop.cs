@@ -12,5 +12,7 @@ namespace Speedo_Bus_Facilitation.Models
         public int busId { get; set; }
         public virtual BusStop BusStop { get; set; }
         public int busStopId { get; set; }
+        //public virtual Route Route { get; set; }
+        //public int RouteId { get; set; }
     }
 }

@@ -156,37 +156,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202206031234256_t.cs" />
-    <Compile Include="Migrations\202206031234256_t.designer.cs">
-      <DependentUpon>202206031234256_t.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202206041744429_t5.cs" />
-    <Compile Include="Migrations\202206041744429_t5.designer.cs">
-      <DependentUpon>202206041744429_t5.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202206041746417_t51.cs" />
-    <Compile Include="Migrations\202206041746417_t51.designer.cs">
-      <DependentUpon>202206041746417_t51.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202206041901196_t52.cs" />
-    <Compile Include="Migrations\202206041901196_t52.designer.cs">
-      <DependentUpon>202206041901196_t52.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202206062044364_t53.cs" />
-    <Compile Include="Migrations\202206062044364_t53.designer.cs">
-      <DependentUpon>202206062044364_t53.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202206062055558_t54.cs" />
-    <Compile Include="Migrations\202206062055558_t54.designer.cs">
-      <DependentUpon>202206062055558_t54.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202206081823457_t6.cs" />
-    <Compile Include="Migrations\202206081823457_t6.designer.cs">
-      <DependentUpon>202206081823457_t6.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202206081935202_t61.cs" />
-    <Compile Include="Migrations\202206081935202_t61.designer.cs">
-      <DependentUpon>202206081935202_t61.cs</DependentUpon>
+    <Compile Include="Migrations\202206181033361_t.cs" />
+    <Compile Include="Migrations\202206181033361_t.designer.cs">
+      <DependentUpon>202206181033361_t.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BalanceHistory.cs" />
@@ -238,29 +210,8 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202206031234256_t.resx">
-      <DependentUpon>202206031234256_t.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202206041744429_t5.resx">
-      <DependentUpon>202206041744429_t5.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202206041746417_t51.resx">
-      <DependentUpon>202206041746417_t51.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202206041901196_t52.resx">
-      <DependentUpon>202206041901196_t52.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202206062044364_t53.resx">
-      <DependentUpon>202206062044364_t53.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202206062055558_t54.resx">
-      <DependentUpon>202206062055558_t54.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202206081823457_t6.resx">
-      <DependentUpon>202206081823457_t6.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202206081935202_t61.resx">
-      <DependentUpon>202206081935202_t61.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202206181033361_t.resx">
+      <DependentUpon>202206181033361_t.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
