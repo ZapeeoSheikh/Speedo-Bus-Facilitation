@@ -32,7 +32,7 @@ https://user-images.githubusercontent.com/77886136/175025884-7289715a-bed3-4653-
 > <hr>
 
 
-## This Project is under Developement and made for General Public as an OpenSource
+``` Note : This Project is under Developement and made for General Public as an OpenSource ```
 
 # contributor
 <a href="https://github.com/ZapeeoSheikh/Speedo-Bus-Facilitation/graphs/contributors">
