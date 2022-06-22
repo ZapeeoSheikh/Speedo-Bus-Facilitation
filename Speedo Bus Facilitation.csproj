@@ -160,11 +160,42 @@
     <Compile Include="Migrations\202206181033361_t.designer.cs">
       <DependentUpon>202206181033361_t.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202206220903175_t5.cs" />
+    <Compile Include="Migrations\202206220903175_t5.designer.cs">
+      <DependentUpon>202206220903175_t5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206220905505_t51.cs" />
+    <Compile Include="Migrations\202206220905505_t51.designer.cs">
+      <DependentUpon>202206220905505_t51.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206220917323_t6.cs" />
+    <Compile Include="Migrations\202206220917323_t6.designer.cs">
+      <DependentUpon>202206220917323_t6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206220919069_t61.cs" />
+    <Compile Include="Migrations\202206220919069_t61.designer.cs">
+      <DependentUpon>202206220919069_t61.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206220926190_t7.cs" />
+    <Compile Include="Migrations\202206220926190_t7.designer.cs">
+      <DependentUpon>202206220926190_t7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206220928023_t71.cs" />
+    <Compile Include="Migrations\202206220928023_t71.designer.cs">
+      <DependentUpon>202206220928023_t71.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206220933509_t8.cs" />
+    <Compile Include="Migrations\202206220933509_t8.designer.cs">
+      <DependentUpon>202206220933509_t8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206221055076_t81.cs" />
+    <Compile Include="Migrations\202206221055076_t81.designer.cs">
+      <DependentUpon>202206221055076_t81.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BalanceHistory.cs" />
     <Compile Include="Models\BusAttendent.cs" />
     <Compile Include="Models\BusCard.cs" />
-    <Compile Include="Models\Bus-Route.cs" />
     <Compile Include="Models\BusStop.cs" />
     <Compile Include="Models\Bus.cs" />
     <Compile Include="Models\Depot.cs" />
@@ -212,6 +243,30 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202206181033361_t.resx">
       <DependentUpon>202206181033361_t.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206220903175_t5.resx">
+      <DependentUpon>202206220903175_t5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206220905505_t51.resx">
+      <DependentUpon>202206220905505_t51.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206220917323_t6.resx">
+      <DependentUpon>202206220917323_t6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206220919069_t61.resx">
+      <DependentUpon>202206220919069_t61.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206220926190_t7.resx">
+      <DependentUpon>202206220926190_t7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206220928023_t71.resx">
+      <DependentUpon>202206220928023_t71.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206220933509_t8.resx">
+      <DependentUpon>202206220933509_t8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206221055076_t81.resx">
+      <DependentUpon>202206221055076_t81.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
