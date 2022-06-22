@@ -34,7 +34,7 @@ https://user-images.githubusercontent.com/77886136/175025884-7289715a-bed3-4653-
 
 ## This Project is under Developement and made for General Public as an OpenSource
 
-# CONTRIBUTERS
+# contributor
 <a href="https://github.com/ZapeeoSheikh/Speedo-Bus-Facilitation/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=ZapeeoSheikh/Speedo-Bus-Facilitation" />
+  <img src="https://contrib.rocks/image?repo=ZapeeoSheikh/Speedo-Bus-Facilitation" style="align="right"/>
 </a>
