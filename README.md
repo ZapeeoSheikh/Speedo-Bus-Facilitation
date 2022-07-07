@@ -1,7 +1,7 @@
 # Speedo-Bus-Facilitation
 
 ***Have a look to Speedo Bus Facilitation System***
-> <hr>
+<hr>
 
 ## Live Preview
 
