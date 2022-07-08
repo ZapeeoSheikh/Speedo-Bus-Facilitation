@@ -1,7 +1,7 @@
 # Speedo-Bus-Facilitation
 
 ***Have a look to Speedo Bus Facilitation System***
-<hr>
+
 
 ## Live Preview
 
@@ -10,7 +10,7 @@ https://user-images.githubusercontent.com/77886136/175025884-7289715a-bed3-4653-
 
 ## Prototype :
 > ![Home Page](https://user-images.githubusercontent.com/77886136/169661523-32a23a22-1fb7-46aa-9059-3779bcf5f776.png)
-> <hr>
+
 
 ## Images while Developement :
 > ![image](https://user-images.githubusercontent.com/77886136/169661586-b75ff274-d505-4d1a-81a6-74c19d1113e0.png)
