@@ -9,12 +9,13 @@ namespace Speedo_Bus_Facilitation.Controllers
 {
     public class HomeController : Controller
     {
-        SpeedoContext db = new SpeedoContext();
+        AppDbContext db = new AppDbContext();
         // GET: Home
         public ActionResult Index()
         {
             List<HomeRoutes> homeRoute = db.HomeRoutes.ToList();
             return View(homeRoute);
+            
         }
         public ActionResult BusNearMe()
         {
@@ -22,8 +23,9 @@ namespace Speedo_Bus_Facilitation.Controllers
         }
         public ActionResult AllRoutes()
         {
-            List<Route> routes = db.routes.ToList();
+            List<Route> routes = db.Routes.ToList();
             return View(routes);
+            
         }
         public ActionResult Terms()
         {
@@ -31,18 +33,44 @@ namespace Speedo_Bus_Facilitation.Controllers
         }
         public ActionResult LiveView(int Id)
         {
-            Route route = db.routes.Where(x => x.Id == Id).FirstOrDefault();
-            return View(route);
+            //Route route = db.Routes.Where(x => x.Id == Id).FirstOrDefault();
+            return View();
         }
-        public ActionResult BusStop()
+        public ActionResult BusStop(string query)
         {
-            List<BusStop> busStops = db.busStop.ToList();
-            return View(busStops);
+            var routes = db.Routes.Where(x=>x.Name.Contains(query)).FirstOrDefault();
+            List<BusStop> busStopsByRoute = new List<BusStop>();
+            if (routes != null)
+            {
+                busStopsByRoute = db.BusStop.Where(x => x.RouteNo == routes.Name ).ToList();
+                foreach (var busStop in busStopsByRoute)
+                {
+                    busStop.ListBusStop = db.BusStop.Take(20).ToList();
+                }
+                return View(busStopsByRoute);
+            }
+            else
+            {
+                List<BusStop> busStops = db.BusStop.Where(x => x.Name.Contains(query)).ToList();
+                if(busStops.Count > 0)
+                {
+                    foreach (var busStop in busStops)
+                    {
+                        busStop.ListBusStop = db.BusStop.Take(20).ToList();
+                    }
+                    return View(busStops);
+                }
+                else {
+                    var bs = new BusStop();
+                    bs.ListBusStop = db.BusStop.Take(20).ToList();
+                    return View(bs);
+                }
 
+            }
         }
         public ActionResult Jobs()
         {
-            List<Jobs> jobs = db.jobs.ToList();
+            List<Jobs> jobs = db.Jobs.ToList();
             return View(jobs);
         }
         public ActionResult Recharge()
@@ -63,8 +91,9 @@ namespace Speedo_Bus_Facilitation.Controllers
         }
         public ActionResult Route(int Id)
         {
-            Route route = db.routes.Where(x => x.Id == Id).FirstOrDefault();
-            return View(route);
+           // Route route = db.Routes.Where(x => x.Id == Id).FirstOrDefault();
+            return View();
+            
         }
 
     }
