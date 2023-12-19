@@ -9,11 +9,10 @@ namespace Speedo_Bus_Facilitation.Models
     public class Route
     {
         [Key]
-        public string Name { get; set; }
-        //public int Id { get; set; }
+        public string RouteNo { get; set; }
         public int Distance { get; set; }
-        
-        //public int Number { get; set; }
+        public string Img { get; set; }
+        public string RouteName { get; set; }
 
     }
 }

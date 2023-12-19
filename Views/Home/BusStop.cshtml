@@ -15,17 +15,17 @@
         <form class="form-inline">
             <div class="input-group">
                 <div class="form-group">
-                    <select name="" class="form-control">
-                        <option value="0">- Please Select Bus Stop -</option>
+                    <input type="text" class="form-control" id="myInput" onkeyup="myFunction()" placeholder="Search for Bus Stop">
+                    @*<select name="" class="form-control">
+            <option value="0">- Please Select Bus Stop -</option>
 
-                        @foreach (var i in Model[0].ListBusStop)
-                        {
-                            <option value="@i.Id"> @i.Name </option>
+            @foreach (var i in Model)
+            {
+                    <option value="@i.Id"> @i.Name </option>
+            }
 
-                        }
 
-
-                    </select>
+        </select>*@
                 </div>
                 <div class="input-group-btn" style="color: white">
                     <button type="button" style="background-color: #F35632;" class="btn "><i class="fa fa-search"></i></button>
@@ -35,9 +35,9 @@
     </div>
     <div class="input-group col-lg-push-9 col-lg-3">
         <div class="">
-            <input type="text" style="height: 50px;" class="form-control" size="50" placeholder="Route Name, Route Number, Bus Number" required>
-            <div class="input-group-btn">
-                <button type="button" style="background-color: #FF6151; color: white; width: 50px; height: 50px;" class="btn "><i class="fa fa-search"></i></button>
+            <input type="text" id="searchit" style="height: 50px;" class="form-control"  size="50" placeholder="Route Name, Route Number, Bus Number" required>
+            <div class="input-group-btn" onclick="RouteIt()">
+                <button type="button" style="background-color: #FF6151; color: white; width: 50px; height: 50px;" class="btn "><i class="fa fa-search" ></i></button>
             </div>
         </div>
     </div>
@@ -46,19 +46,28 @@
     <div style="margin-top: 30px; ">
         <div style="margin-bottom: 50px;">
             <h2 style="color: #FF6151; font-weight: 600; ">
-                Bhatti Chowk - RA Bazar 
+                @{
+                    if (Model.FirstOrDefault() != null)
+                    {
+                        @Html.Raw(@Model.FirstOrDefault().Name+ " - "+ @Model.LastOrDefault().Name) 
+                    }
+
+                }
+
                 <i class="fa fa-bus " style="padding-left: 60px;padding-right: 10px; font-size: 26px; color: #003e5f"></i>
-                <span style="font-weight: 600; font-size: 25px; color: #003e5f "> Route 250</span>
+                <span style="font-weight: 600; font-size: 25px; color: #003e5f "> Total Stops @Model.Count()</span>
             </h2>
         </div>
-        <table class="table table-fixed table-striped">
+        <table class="table table-fixed table-striped" id="myTable">
             <thead>
                 <tr>
                     <th> Type</th>
                     <th> Bus Stop</th>
+                    <th> Bus No </th>
                     <th> Route No</th>
                     <th> Route Name </th>
                     <th> Tracking </th>
+
                 </tr>
             </thead>
             <tbody>
@@ -67,9 +76,25 @@
                 <tr>
                     <td><i class="fa fa-bus " style="font-size: 26px; color: #FF6151"></i></td>
                     <td> @i.Name</td>
-                    <td> @i.RouteNo</td>                    
-                    <td><a href="\Home\Route\@i.RouteNo" style="color: #003e5f"> @i.RouteName </a></td>
-                    <td><a href="\Home\LiveView\@i.RouteNo" style="color: #003e5f"> Live Track </a></td>
+                    <td> @i.BusNo</td>
+                    <td>
+                        @if (i.RouteNo.Contains(","))
+                        {
+                            var c = i.RouteNo.Split(',');
+                            foreach (var item in c)
+                            {
+                                <a href="\Home\Route\@item" style="color: #003e5f"> @item </a>
+                            }
+
+                        }
+                        else { 
+                    <a href="\Home\Route\@i.RouteNo" style="color: #003e5f"> @i.RouteNo </a>
+                        }
+
+                    </td>
+                    <td> @i.RouteName</td>
+
+                    <td><a style="color: #003e5f" data-stopname="@i.Name" onclick="getLocation(this)">Track Yourself</a></td>
                 </tr>
             }
             </tbody>
@@ -78,6 +103,7 @@
                 <tr>
                     <th> Type</th>
                     <th> Bus Stop</th>
+                    <th> Bus No </th>
                     <th> Route No</th>
                     <th> Route Name </th>
                     <th> Tracking </th>
@@ -90,4 +116,55 @@
         View all the Routes
     </button>
 </div>
+<script>
+    function myFunction() {
+        debugger;
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[1];
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+
+        function RouteIt() {
+        debugger;
+            var query = $("#searchit").val();
+
+        window.location.href = '/Home/BusStop?query=' + query
+    }
+
+
+    var destination;
+    function getLocation(data) {
+        debugger;
+        var source;
+        destination = data.getAttribute('data-stopname');
+        console.log("destination: "  + destination);
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+            x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+    }
+
+    function showPosition(position) {
+        source = position.coords.latitude + "," + position.coords.longitude;
+        console.log("source: " + source);
+        var url = "https://www.google.com/maps/dir/" + source + "/" + destination;
+        window.open(url, '_blank').focus();
+
+    }
+
+</script>
 

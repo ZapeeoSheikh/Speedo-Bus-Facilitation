@@ -94,13 +94,6 @@
   <ItemGroup>
     <Content Include="assets\bottom.png" />
     <Content Include="assets\fb.png" />
-    <Content Include="assets\routes\FR-9 .jpg" />
-    <Content Include="assets\routes\FR-10 .jpg" />
-    <Content Include="assets\routes\FR-11 .jpg" />
-    <Content Include="assets\routes\FR-12 .jpg" />
-    <Content Include="assets\routes\FR-13 .jpg" />
-    <Content Include="assets\routes\FR-14 .jpg" />
-    <Content Include="assets\routes\FR-15 .jpg" />
     <Content Include="assets\guide.jpg" />
     <Content Include="assets\divider.png" />
     <Content Include="assets\insta.png" />
@@ -109,15 +102,22 @@
     <Content Include="assets\location2.png" />
     <Content Include="assets\logo speedo.png" />
     <Content Include="assets\mybus-removebg-preview.png" />
-    <Content Include="assets\routes\FR-16 .jpg" />
-    <Content Include="assets\routes\FR-17 .jpg" />
-    <Content Include="assets\routes\FR-2 .jpg" />
-    <Content Include="assets\routes\FR-3 .jpg" />
-    <Content Include="assets\routes\FR-4 .jpg" />
-    <Content Include="assets\routes\FR-5 .jpg" />
-    <Content Include="assets\routes\FR-6 .jpg" />
-    <Content Include="assets\routes\FR-7 .jpg" />
-    <Content Include="assets\routes\FR-8 .jpg" />
+    <Content Include="assets\RouteImages\FR-02.jpg" />
+    <Content Include="assets\RouteImages\FR-03.jpg" />
+    <Content Include="assets\RouteImages\FR-04.jpg" />
+    <Content Include="assets\RouteImages\FR-05.jpg" />
+    <Content Include="assets\RouteImages\FR-07.jpg" />
+    <Content Include="assets\RouteImages\FR-08.jpg" />
+    <Content Include="assets\RouteImages\FR-09.jpg" />
+    <Content Include="assets\RouteImages\FR-10.jpg" />
+    <Content Include="assets\RouteImages\FR-11.jpg" />
+    <Content Include="assets\RouteImages\FR-12.jpg" />
+    <Content Include="assets\RouteImages\FR-13.jpg" />
+    <Content Include="assets\RouteImages\FR-14.jpg" />
+    <Content Include="assets\RouteImages\FR-15.jpg" />
+    <Content Include="assets\RouteImages\FR-16.jpg" />
+    <Content Include="assets\RouteImages\FR-17.jpg" />
+    <Content Include="assets\RouteImages\FR-6 .jpg" />
     <Content Include="assets\sp bus logo.jpg" />
     <Content Include="assets\speedo bg.jpg" />
     <Content Include="assets\travel easy.png" />
@@ -176,6 +176,7 @@
     <Compile Include="Models\Bus BusStop.cs" />
     <Compile Include="Models\Token.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\RoutesViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -196,6 +197,7 @@
     <Content Include="Views\Home\Route.cshtml" />
     <Content Include="Scripts\jquery-3.7.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.7.1.min.map" />
+    <Content Include="Speedo" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -204,7 +206,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Code\" />
     <Folder Include="App_Data\" />
+    <Folder Include="RouteImages\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

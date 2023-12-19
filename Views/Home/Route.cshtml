@@ -1,5 +1,5 @@
 ﻿@using Speedo_Bus_Facilitation.Models
-@model Speedo_Bus_Facilitation.Models.Route
+@model  Speedo_Bus_Facilitation.ViewModels.RoutesViewModel
 
 @{
     ViewBag.Title = "Route";
@@ -12,30 +12,45 @@
 <table class="table table-striped" style="margin-top: 50px ">
     <thead>
         <tr>
-            <th>Route Number</th>
+            @*<th>Route Number</th>*@
             <th>Route Name</th>
-            <th>Distance</th>
+            @*<th>Distance</th>*@
             <th>Buses Number</th>
             <th>Bus Stops</th>
+            <th>Route Image</th>
         </tr>
     </thead>
     <tbody style="color: #d02525">
         <tr>
-            <td class="col-lg-2">FR - @Model.Number</td>
-            <td class="col-lg-2">@Model.Name</td>
-            <td class="col-lg-2">@Model.Distance km</td>
-            <td class="col-lg-3">F100, F200, F300</td>
-            <td class="col-lg-5">Bhatti Chowk, Katchari, Nasir Bagh, Civil Secretariat, Mao College, Anarkali Metro Station, Janazgah, Qartaba Chowk </td>
+            @*<td class="col-lg-2">FR - @Model.Number</td>*@
+            <td class="col-lg-2">@Model.Route.RouteName</td>
+            @*<td class="col-lg-2">@Model.Route.Distance km</td>*@
+            <td class="col-lg-3">
+                @foreach (var item in Model.BusNosList)
+                {
+                    @Html.Raw(item + ", ");
+
+                }
+            </td>
+            <td class="col-lg-5">
+                @foreach (var item in Model.BusStops)
+                {
+                    @Html.Raw(item.Name + ", ")
+
+                }
+            </td>
+            <td class="col-lg-2"><a href="@Model.Route.Img" target="_blank">Maps</a></td>
         </tr>
 
     </tbody>
     <tfoot>
         <tr>
-            <th>Route Number</th>
+            @*<th>Route Number</th>*@
             <th>Route Name</th>
-            <th>Distance</th>
+            @*<th>Distance</th>*@
             <th>Buses Number</th>
             <th>Bus Stops</th>
+            <th>Route Image</th>
         </tr>
     </tfoot>
 

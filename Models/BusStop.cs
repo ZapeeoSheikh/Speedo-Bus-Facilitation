@@ -15,9 +15,11 @@ namespace Speedo_Bus_Facilitation.Models
         [ForeignKey("Routes")]
         public string RouteNo { get; set; }
         public virtual Route Routes { get; set; }
-        public string RouteName { get; set; }
+        public string BusNo { get; set; }
         [NotMapped]
         public List<BusStop> ListBusStop { get; set; }
+        [NotMapped]
+        public string RouteName { get; set; }
 
     }
 }
