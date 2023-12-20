@@ -14,7 +14,6 @@
     background: white;
     border-radius: 10px;
     margin-top: 20px;
-    margin-left: 590px;
 }
 
 .file input {
@@ -165,7 +164,7 @@ body {
 }
 
 .alldot {
-    border-radius: 50%;
+    border-radius: 30%;
     height: 150px;
     width: 150px;
     margin-bottom: 30px;
@@ -253,8 +252,8 @@ body {
     text-decoration: none;
     background: white;
     border-radius: 100px;
-    margin-top: 1020px;
-    margin-left: 590px;
+   /* margin-top: 1020px;
+    margin-left: 590px;*/
 }
 
 

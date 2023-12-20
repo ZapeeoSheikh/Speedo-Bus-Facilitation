@@ -92,6 +92,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\bottom-cropped.png" />
     <Content Include="assets\bottom.png" />
     <Content Include="assets\fb.png" />
     <Content Include="assets\guide.jpg" />
@@ -120,6 +121,7 @@
     <Content Include="assets\RouteImages\FR-6 .jpg" />
     <Content Include="assets\sp bus logo.jpg" />
     <Content Include="assets\speedo bg.jpg" />
+    <Content Include="assets\travel easy-cropped.png" />
     <Content Include="assets\travel easy.png" />
     <Content Include="assets\twitter.png" />
     <Content Include="assets\world-map.png" />
@@ -197,7 +199,7 @@
     <Content Include="Views\Home\Route.cshtml" />
     <Content Include="Scripts\jquery-3.7.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.7.1.min.map" />
-    <Content Include="Speedo" />
+    <Content Include="Speedo.bak" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

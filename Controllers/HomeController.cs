@@ -20,7 +20,8 @@ namespace Speedo_Bus_Facilitation.Controllers
         }
         public ActionResult BusNearMe()
         {
-            return View();
+            List<Route> routes = db.Routes.ToList();
+            return View(routes);
         }
         public ActionResult AllRoutes()
         {

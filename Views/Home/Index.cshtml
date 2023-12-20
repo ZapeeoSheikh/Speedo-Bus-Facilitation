@@ -4,111 +4,149 @@
 @{
     ViewBag.Title = "Home ";
 }
+<style>
+    .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .centered1 {
+        position: absolute;
+        top: 40%;
+        left: 20%;
+        transform: translate(-50%, -50%);
+        width:100%;
+    }
+</style>
 
 
+<img src="~/assets/speedo bg.jpg" style="height: 659px; opacity: 50.0; width: 100%;" id="myPage" />
 
-<img src="~/assets/speedo bg.jpg" style="height: 659px; position: absolute; opacity: 50.0; width: 100%;" />
+<div class="row centered1">
+    <div class="col-md-12" style="align-items: center; display: flex; justify-content: center;">
+        <button onclick="window.location.href='/Home/BusNearMe'" style="position: relative; height: 57px; text-decoration: none; color: white; background: #F15933; border-radius: 10px; border: red; width: 8%; margin-right: 5px;">
+            <i class="fa fa-map-marker"></i> <span style="color: #ffffff"> Bus Near me</span>
+        </button>
+        <button onclick="RouteIt()" style="height: 57px; background: white; border-radius: 10px 0px 0px 10px; border: white; width: 3%;">
+            <i class="fa fa-search"></i>
+        </button>
 
-<button onclick="window.location.href='/Home/BusNearMe'" style="position:relative ; width: 155px; height: 57px; text-decoration: none; color: white; background: #F15933; border-radius: 10px; border: red; margin-top: 360px; margin-left: 350px; ">
-    <i class="fa fa-map-marker"></i> <span style="color: #ffffff"> Bus Near me</span>
-</button>
-<button onclick="RouteIt()" style="position: absolute; width: 55px; height: 57px; background: white; border-radius: 10px 0px 0px 10px; border: white; margin-top: 360px; margin-left: 10px;">
-    <i class="fa fa-search"></i>
-</button>
-
-<input type="text" id="btn-search" style="position: absolute; width: 349px; height: 57px; margin-top: 360px; border: white; margin-left: 50px; background: #FFFFFF; border-radius: 0px 10px 10px 0px; " placeholder="Search Bus/Route Number " />
-
-
-
-<h4 style="color: #000000; font-style: normal; font-weight: 400; font-size: 30px; margin-top: 280px; margin-left: 30px ;margin-bottom: 0px; ">
-    Making Bus Travel Better
-</h4>
-<img src="~/assets/world-map.png" style="position: absolute; height: 190px; padding-left: 1100px; " />
-<h4 style="color: #D02525; font-style: normal; font-weight: 600; font-size: 30px; margin-top: 4px; margin-left: 30px ">
-    Speedo Bus Servies
-</h4>
-
-<div style="padding-left: 0px;">
-    <div class="row" style="margin-left: 0px;margin-right: 0px;">
-        <div class="col-xs-12 col-sm-6 col-md-8 col-centered">
-            <div class="maintxt">
-                <img src="~/assets/travel easy.png" style=" width: 1400px; margin-top: 80px; " />
-                <h4 class="overlay-text" style="color: #000000; padding-top: 440px; padding-left: 470px; font-weight: 400; font-size: 25px; margin-top: 0px; margin-left: 30px; margin-bottom: 0px;">
-                    Bus Stops Where You Can
-                </h4>
-                <h4 class="overlay-text" style="color: #D02525; position: absolute; padding-top: 470px; padding-left: 470px ; font-weight: 600; font-size: 30px; margin-top: 4px; margin-left: 30px;  ">
-                    Travel in Speedo Bus Servies
-                </h4>
-
-            </div>
-        </div>
+        <input type="text" id="btn-search" style="height: 57px; border: white; background: #FFFFFF; border-radius: 0px 10px 10px 0px; width: 16%; " placeholder="Search Bus/Route Number " />
     </div>
 
-    <div style=" ">
+</div>
+
+
+<div class="row">
+    <div class="col-md-4">
+        <img src="~/assets/world-map.png" style=" margin: auto; width: initial;" />
+    </div>
+    <div class="col-md-8">
+        <h4 style="color: #000000; font-style: normal; font-weight: 400; font-size: 30px; display: flex; width: 50%; margin-top: 100px; align-items: center; justify-content: center; ">
+            Making Bus Travel Better
+        </h4>
+        <h4 style="color: #D02525; font-style: normal; font-weight: 600; font-size: 30px; margin-top: 4px; display: flex; justify-content: center; width: 50%;">
+            Speedo Bus Servies
+        </h4>
+
+
+    </div>
+
+
+</div>
+
+
+
+
+
+<div class="row">
+    <div class="col-lg-12">
+            <img src="~/assets/travel easy.png" style="margin-top: 80px;width:100%; " />
+            <div >
+                <h4 class="centered" style="color: #000000;font-weight: 400;font-size: 25px;margin-top:80px">
+                    Bus Stops Where You Can
+                </h4>
+                <h4 class="centered" style="color: #D02525; font-weight: 600; font-size: 30px; top: 65%;">
+                    Travel in Speedo Bus Servies
+                </h4>
+            </div>
+    </div>
+</div>
+
+@*<div style=" ">
         <div class="routes " style="margin-left: 250px; margin-right: 200px">
             @foreach(var i in Model)
             {
                 <span class="dot "><span style="display: flex; justify-content: center; margin-top: 45px; color: #d02525; font-family:cursive;  font-weight: 600; font-size: 12px">@i.busStop.Name</span></span>
             }
         </div>
-    </div>
-
+    </div>*@
+<div style=" justify-content: center; display: flex;">
     <button class="view" onclick="window.location.href='/Home/AllRoutes'" style="font-weight: 600;  ">
         View all the Routes
     </button>
-
-    <div style="margin-top: 100px; border-top: 1px solid grey; ">
-        <h4 style="color: #000000; font-style: normal; padding-top: 60px;  font-weight: 400; font-size: 35px; margin-top: 10px; margin-bottom: 0px; display: flex; justify-content: center;">
-            Travel Guideline that
-        </h4>
-        <h4 style="color: #D02525; position: relative; font-weight: 600; font-size: 30px; margin-top: 4px; display: flex; justify-content: center;">
-            You Must Know
-        </h4>
-        <h6 style="color: #D02525; position: relative; display: flex; justify-content: center; font-size: 17px; margin-top: 4px; ">
-            Redefining the bus travel experience through technology.
-        </h6>
-
-        <div class="col-lg-push-1 col-lg-11" style="margin-top: 50px; margin-bottom: 50px; padding-right: 50px; padding-left: 0px; position: absolute; display: flex; justify-content: center;">
-            @for (int i = 1; i <= 4; i++)
-            {
-                <div class="col-lg-3 guide" style="padding: 20px; margin-right: 20px;">
-
-                    <h4 class="head4">
-                        <i class="fa fa-money"></i> &nbsp; Bus Fair
-                    </h4>
-                    <p class="para">
-                        The cost of Speedo Single side travel is 20Rs But if you have a card you will be charge 15Rs for single side. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    </p>
-                    <a href="\Home\TravelGuide" class="parabutton">
-                        Read More about travel guidelines
-                    </a>
-                </div>
-
-            }
+</div>
 
 
+<div style="margin-top: 100px; border-top: 1px solid grey; ">
+    <h4 style="color: #000000; font-style: normal; padding-top: 60px;  font-weight: 400; font-size: 35px; margin-top: 10px; margin-bottom: 0px; display: flex; justify-content: center;">
+        Travel Guideline that
+    </h4>
+    <h4 style="color: #D02525; position: relative; font-weight: 600; font-size: 30px; margin-top: 4px; display: flex; justify-content: center;">
+        You Must Know
+    </h4>
+    <h6 style="color: #D02525; position: relative; display: flex; justify-content: center; font-size: 17px; margin-top: 4px; ">
+        Redefining the bus travel experience through technology.
+    </h6>
+</div>
+<div class="" style="margin-top: 50px; margin-bottom: 50px; display: flex; justify-content: center;">
+    @for (int i = 1; i <= 4; i++)
+    {
+        <div class="col-lg-3 guide" style="padding: 20px; margin-right: 20px;">
 
+            <h4 class="head4">
+                <i class="fa fa-money"></i> &nbsp; Bus Fair
+            </h4>
+            <p class="para">
+                The cost of Speedo Single side travel is 20Rs But if you have a card you will be charge 15Rs for single side. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </p>
+            <a href="\Home\TravelGuide" class="parabutton">
+                Read More about travel guidelines
+            </a>
         </div>
+
+    }
+
+
+
+</div>
+<div>
+    <img src="~/assets/divider.png" style="width:100%;" />
+</div>
+
+
+    <div style="margin-top: 30px; ">
+        <h4 style="color: #000000;  font-weight: 400; font-size: 25px;  margin-bottom: 0px;">
+            Why wait at The
+        </h4>
+        <h4 style="color: #D02525; font-weight: 600; font-size: 30px; ">
+            Bus stop Ever Again
+        </h4>
     </div>
-
-    <img src="~/assets/divider.png" height=200px; style="padding-left: 20px; margin-top: 450px; position: absolute" />
+    <div style="text-align:center; margin:60px;">
+        <a href="\Home\BusStop" style="color: #D02525; font-size: 22px;"><i class="fa fa-map-marker"></i> <span>Live Track your bus now</span> </a>
+    </div>
+    
     <div>
-        <div style="margin-top: 700px; margin-left: 30px; position: absolute; ">
-            <h4 style="color: #000000;  font-weight: 400; font-size: 25px;  margin-bottom: 0px;">
-                Why wait at The
-            </h4>
-            <h4 style="color: #D02525; font-weight: 600; font-size: 30px; ">
-                Bus stop Ever Again
-            </h4>
-        </div>
-        <a href="\Home\BusStop" style="color: #D02525; position: absolute; padding-left: 575px; font-weight: 100; font-size: 25px; margin-top: 830px; margin-left: 30px">
-            <i class="fa fa-map-marker"></i> Live Track your bus now
-        </a>
-
-        <img src="~/assets/bottom.png" style="width: 1400px; margin-bottom: 100px; padding-left: 100px " />
+        <img src="~/assets/bottom-cropped.png" style="width:100%;" />
+    </div>
+    <div>
         <img src="~/assets/logo speedo.png" style="margin-left: 40px;" />
     </div>
-</div>
+
+    
+
 
 
 
@@ -121,10 +159,23 @@
     function RouteIt() {
         debugger;
         var query = $("#btn-search").val();
+        if (query == '' || query == "undefined" || query == null) {
+            return;
+        }
 
         window.location.href = '/Home/BusStop?query=' + query
     }
-    </script>
+   
+
+    var input = document.getElementById("btn-search");
+    input.addEventListener("keypress", function (event) {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            //document.getElementById("myBtn").click();
+            RouteIt();
+        }
+    });
+</script>
 
 
 
