@@ -1,0 +1,536 @@
+USE [master]
+GO
+/****** Object:  Database [SpeedoBusDb]    Script Date: 12/21/2023 5:18:19 PM ******/
+CREATE DATABASE [SpeedoBusDb]
+ CONTAINMENT = NONE
+ ON  PRIMARY 
+( NAME = N'SpeedoBusDb', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL16.QAISARSQL\MSSQL\DATA\SpeedoBusDb.mdf' , SIZE = 8192KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
+ LOG ON 
+( NAME = N'SpeedoBusDb_log', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL16.QAISARSQL\MSSQL\DATA\SpeedoBusDb_log.ldf' , SIZE = 8192KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
+ WITH CATALOG_COLLATION = DATABASE_DEFAULT, LEDGER = OFF
+GO
+ALTER DATABASE [SpeedoBusDb] SET COMPATIBILITY_LEVEL = 160
+GO
+IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
+begin
+EXEC [SpeedoBusDb].[dbo].[sp_fulltext_database] @action = 'enable'
+end
+GO
+ALTER DATABASE [SpeedoBusDb] SET ANSI_NULL_DEFAULT OFF 
+GO
+ALTER DATABASE [SpeedoBusDb] SET ANSI_NULLS OFF 
+GO
+ALTER DATABASE [SpeedoBusDb] SET ANSI_PADDING OFF 
+GO
+ALTER DATABASE [SpeedoBusDb] SET ANSI_WARNINGS OFF 
+GO
+ALTER DATABASE [SpeedoBusDb] SET ARITHABORT OFF 
+GO
+ALTER DATABASE [SpeedoBusDb] SET AUTO_CLOSE OFF 
+GO
+ALTER DATABASE [SpeedoBusDb] SET AUTO_SHRINK OFF 
+GO
+ALTER DATABASE [SpeedoBusDb] SET AUTO_UPDATE_STATISTICS ON 
+GO
+ALTER DATABASE [SpeedoBusDb] SET CURSOR_CLOSE_ON_COMMIT OFF 
+GO
+ALTER DATABASE [SpeedoBusDb] SET CURSOR_DEFAULT  GLOBAL 
+GO
+ALTER DATABASE [SpeedoBusDb] SET CONCAT_NULL_YIELDS_NULL OFF 
+GO
+ALTER DATABASE [SpeedoBusDb] SET NUMERIC_ROUNDABORT OFF 
+GO
+ALTER DATABASE [SpeedoBusDb] SET QUOTED_IDENTIFIER OFF 
+GO
+ALTER DATABASE [SpeedoBusDb] SET RECURSIVE_TRIGGERS OFF 
+GO
+ALTER DATABASE [SpeedoBusDb] SET  ENABLE_BROKER 
+GO
+ALTER DATABASE [SpeedoBusDb] SET AUTO_UPDATE_STATISTICS_ASYNC OFF 
+GO
+ALTER DATABASE [SpeedoBusDb] SET DATE_CORRELATION_OPTIMIZATION OFF 
+GO
+ALTER DATABASE [SpeedoBusDb] SET TRUSTWORTHY OFF 
+GO
+ALTER DATABASE [SpeedoBusDb] SET ALLOW_SNAPSHOT_ISOLATION OFF 
+GO
+ALTER DATABASE [SpeedoBusDb] SET PARAMETERIZATION SIMPLE 
+GO
+ALTER DATABASE [SpeedoBusDb] SET READ_COMMITTED_SNAPSHOT ON 
+GO
+ALTER DATABASE [SpeedoBusDb] SET HONOR_BROKER_PRIORITY OFF 
+GO
+ALTER DATABASE [SpeedoBusDb] SET RECOVERY FULL 
+GO
+ALTER DATABASE [SpeedoBusDb] SET  MULTI_USER 
+GO
+ALTER DATABASE [SpeedoBusDb] SET PAGE_VERIFY CHECKSUM  
+GO
+ALTER DATABASE [SpeedoBusDb] SET DB_CHAINING OFF 
+GO
+ALTER DATABASE [SpeedoBusDb] SET FILESTREAM( NON_TRANSACTED_ACCESS = OFF ) 
+GO
+ALTER DATABASE [SpeedoBusDb] SET TARGET_RECOVERY_TIME = 60 SECONDS 
+GO
+ALTER DATABASE [SpeedoBusDb] SET DELAYED_DURABILITY = DISABLED 
+GO
+ALTER DATABASE [SpeedoBusDb] SET ACCELERATED_DATABASE_RECOVERY = OFF  
+GO
+EXEC sys.sp_db_vardecimal_storage_format N'SpeedoBusDb', N'ON'
+GO
+ALTER DATABASE [SpeedoBusDb] SET QUERY_STORE = ON
+GO
+ALTER DATABASE [SpeedoBusDb] SET QUERY_STORE (OPERATION_MODE = READ_WRITE, CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 30), DATA_FLUSH_INTERVAL_SECONDS = 900, INTERVAL_LENGTH_MINUTES = 60, MAX_STORAGE_SIZE_MB = 1000, QUERY_CAPTURE_MODE = AUTO, SIZE_BASED_CLEANUP_MODE = AUTO, MAX_PLANS_PER_QUERY = 200, WAIT_STATS_CAPTURE_MODE = ON)
+GO
+USE [SpeedoBusDb]
+GO
+/****** Object:  Table [dbo].[BalanceHistories]    Script Date: 12/21/2023 5:18:19 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[BalanceHistories](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[cardId] [int] NOT NULL,
+	[History] [int] NOT NULL,
+ CONSTRAINT [PK_dbo.BalanceHistories] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[BusAttendents]    Script Date: 12/21/2023 5:18:19 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[BusAttendents](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Age] [int] NOT NULL,
+	[Salary] [int] NOT NULL,
+	[cardId] [int] NOT NULL,
+	[busId] [int] NOT NULL,
+	[roleId] [int] NOT NULL,
+ CONSTRAINT [PK_dbo.BusAttendents] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[BusCards]    Script Date: 12/21/2023 5:18:19 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[BusCards](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[CardNo] [int] NOT NULL,
+	[Limit] [int] NOT NULL,
+	[CheckIn] [datetime] NOT NULL,
+	[CheckOut] [datetime] NOT NULL,
+ CONSTRAINT [PK_dbo.BusCards] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Buses]    Script Date: 12/21/2023 5:18:19 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Buses](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[No] [int] NOT NULL,
+	[Start] [nvarchar](max) NULL,
+	[End] [nvarchar](max) NULL,
+	[TotalStops] [int] NOT NULL,
+ CONSTRAINT [PK_dbo.Buses] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[BusStops]    Script Date: 12/21/2023 5:18:19 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[BusStops](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](max) NULL,
+	[RouteNo] [nvarchar](128) NULL,
+	[BusNo] [nvarchar](max) NULL,
+ CONSTRAINT [PK_dbo.BusStops] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Depots]    Script Date: 12/21/2023 5:18:19 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Depots](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](max) NULL,
+	[NoOfBus] [int] NOT NULL,
+	[NoServiceBus] [int] NOT NULL,
+	[busId] [int] NOT NULL,
+ CONSTRAINT [PK_dbo.Depots] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Directions]    Script Date: 12/21/2023 5:18:19 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Directions](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[routeId] [int] NOT NULL,
+	[route_Name] [nvarchar](128) NULL,
+ CONSTRAINT [PK_dbo.Directions] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Drivers]    Script Date: 12/21/2023 5:18:19 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Drivers](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Age] [int] NOT NULL,
+	[Salary] [int] NOT NULL,
+	[RoutePerDay] [int] NOT NULL,
+	[busCardId] [int] NOT NULL,
+	[busId] [int] NOT NULL,
+	[routeId] [int] NOT NULL,
+	[route_Name] [nvarchar](128) NULL,
+ CONSTRAINT [PK_dbo.Drivers] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[HomeRoutes]    Script Date: 12/21/2023 5:18:19 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[HomeRoutes](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[BsuStopId] [int] NOT NULL,
+	[busStop_Id] [int] NULL,
+ CONSTRAINT [PK_dbo.HomeRoutes] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Jobs]    Script Date: 12/21/2023 5:18:19 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Jobs](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Post] [nvarchar](max) NULL,
+	[Location] [nvarchar](max) NULL,
+	[Department] [nvarchar](max) NULL,
+ CONSTRAINT [PK_dbo.Jobs] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Lines]    Script Date: 12/21/2023 5:18:19 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Lines](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](max) NULL,
+	[CurrentStop] [nvarchar](max) NULL,
+	[NextStop] [nvarchar](max) NULL,
+	[PrevStop] [nvarchar](max) NULL,
+ CONSTRAINT [PK_dbo.Lines] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Passengers]    Script Date: 12/21/2023 5:18:19 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Passengers](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[busCardId] [int] NOT NULL,
+ CONSTRAINT [PK_dbo.Passengers] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Roles]    Script Date: 12/21/2023 5:18:19 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Roles](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Title] [int] NOT NULL,
+ CONSTRAINT [PK_dbo.Roles] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Routes]    Script Date: 12/21/2023 5:18:19 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Routes](
+	[RouteNo] [nvarchar](128) NOT NULL,
+	[Distance] [int] NOT NULL,
+	[Img] [nvarchar](max) NULL,
+	[RouteName] [nvarchar](max) NULL,
+ CONSTRAINT [PK_dbo.Routes] PRIMARY KEY CLUSTERED 
+(
+	[RouteNo] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Tokens]    Script Date: 12/21/2023 5:18:19 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Tokens](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Number] [int] NOT NULL,
+	[ValidTime] [datetime] NOT NULL,
+	[Price] [int] NOT NULL,
+ CONSTRAINT [PK_dbo.Tokens] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET IDENTITY_INSERT [dbo].[Buses] ON 
+GO
+INSERT [dbo].[Buses] ([Id], [No], [Start], [End], [TotalStops]) VALUES (1, 210, N'10', N'20', 12)
+GO
+INSERT [dbo].[Buses] ([Id], [No], [Start], [End], [TotalStops]) VALUES (2, 211, N'14', N'19', 13)
+GO
+INSERT [dbo].[Buses] ([Id], [No], [Start], [End], [TotalStops]) VALUES (3, 213, N'11', N'21', 15)
+GO
+SET IDENTITY_INSERT [dbo].[Buses] OFF
+GO
+SET IDENTITY_INSERT [dbo].[BusStops] ON 
+GO
+INSERT [dbo].[BusStops] ([Id], [Name], [RouteNo], [BusNo]) VALUES (45, N'Bhatti Chowk', N'FR-15', N'210')
+GO
+INSERT [dbo].[BusStops] ([Id], [Name], [RouteNo], [BusNo]) VALUES (46, N'katchery', N'FR-15', N'210')
+GO
+INSERT [dbo].[BusStops] ([Id], [Name], [RouteNo], [BusNo]) VALUES (47, N'Civil Secretariat', N'FR-15', N'210')
+GO
+INSERT [dbo].[BusStops] ([Id], [Name], [RouteNo], [BusNo]) VALUES (48, N'M.A.O College', N'FR-15', N'210')
+GO
+INSERT [dbo].[BusStops] ([Id], [Name], [RouteNo], [BusNo]) VALUES (49, N'Jain Mandir', N'FR-15', N'210')
+GO
+INSERT [dbo].[BusStops] ([Id], [Name], [RouteNo], [BusNo]) VALUES (50, N'Janazgah', N'FR-15', N'210')
+GO
+INSERT [dbo].[BusStops] ([Id], [Name], [RouteNo], [BusNo]) VALUES (51, N'Qartba Chowk', N'FR-15', N'210')
+GO
+INSERT [dbo].[BusStops] ([Id], [Name], [RouteNo], [BusNo]) VALUES (52, N'Mozang', N'FR-15', N'210')
+GO
+INSERT [dbo].[BusStops] ([Id], [Name], [RouteNo], [BusNo]) VALUES (53, N'Roznama Pakistan', N'FR-15', N'210')
+GO
+INSERT [dbo].[BusStops] ([Id], [Name], [RouteNo], [BusNo]) VALUES (54, N'Lahore College', N'FR-15', N'210')
+GO
+INSERT [dbo].[BusStops] ([Id], [Name], [RouteNo], [BusNo]) VALUES (55, N'Service Hospital', N'FR-15', N'210')
+GO
+INSERT [dbo].[BusStops] ([Id], [Name], [RouteNo], [BusNo]) VALUES (56, N'P.I.C', N'FR-15', N'210')
+GO
+INSERT [dbo].[BusStops] ([Id], [Name], [RouteNo], [BusNo]) VALUES (57, N'Kinnaird College', N'FR-15', N'212,211')
+GO
+INSERT [dbo].[BusStops] ([Id], [Name], [RouteNo], [BusNo]) VALUES (58, N'Zafar Ali Road', N'FR-04,FR-15', N'211,210,212')
+GO
+SET IDENTITY_INSERT [dbo].[BusStops] OFF
+GO
+INSERT [dbo].[Routes] ([RouteNo], [Distance], [Img], [RouteName]) VALUES (N'FR-02', 1, N'/assets/RouteImages/FR-02.jpg', N'Bhatti to Morr Samnabad')
+GO
+INSERT [dbo].[Routes] ([RouteNo], [Distance], [Img], [RouteName]) VALUES (N'FR-03', 2, N'/assets/RouteImages/FR-03.jpg', N'Railway Station to Rana Town')
+GO
+INSERT [dbo].[Routes] ([RouteNo], [Distance], [Img], [RouteName]) VALUES (N'FR-04', 3, N'/assets/RouteImages/FR-04.jpg', N'R.A Bazar to Chungi Amar Sidhu')
+GO
+INSERT [dbo].[Routes] ([RouteNo], [Distance], [Img], [RouteName]) VALUES (N'FR-05', 4, N'/assets/RouteImages/FR-05.jpg', N'Bhatti Chowk to Shadbagh')
+GO
+INSERT [dbo].[Routes] ([RouteNo], [Distance], [Img], [RouteName]) VALUES (N'FR-06', 6, N'/assets/RouteImages/FR-06.jpg', N'Babu Sabu to Raj Garh')
+GO
+INSERT [dbo].[Routes] ([RouteNo], [Distance], [Img], [RouteName]) VALUES (N'FR-07', 7, N'/assets/RouteImages/FR-06.jpg', N'Chungi to Bagrian')
+GO
+INSERT [dbo].[Routes] ([RouteNo], [Distance], [Img], [RouteName]) VALUES (N'FR-08', 7, N'/assets/RouteImages/FR-08.jpg', N'Daewoo Terminal to Canal')
+GO
+INSERT [dbo].[Routes] ([RouteNo], [Distance], [Img], [RouteName]) VALUES (N'FR-09', 7, N'/assets/RouteImages/FR-09.jpg', N'Shamnagar to Railway Station')
+GO
+INSERT [dbo].[Routes] ([RouteNo], [Distance], [Img], [RouteName]) VALUES (N'FR-10', 7, N'/assets/RouteImages/FR-10.jpg', N'Multan Chungi to Qartba Chowk')
+GO
+INSERT [dbo].[Routes] ([RouteNo], [Distance], [Img], [RouteName]) VALUES (N'FR-11', 7, N'/assets/RouteImages/FR-11.jpg', N'Babu Sabu to Main Market')
+GO
+INSERT [dbo].[Routes] ([RouteNo], [Distance], [Img], [RouteName]) VALUES (N'FR-12', 7, N'/assets/RouteImages/FR-12.jpg', N'R.A Bazar to Civil Secretariat')
+GO
+INSERT [dbo].[Routes] ([RouteNo], [Distance], [Img], [RouteName]) VALUES (N'FR-13', 7, N'/assets/RouteImages/FR-13.jpg', N'Bagrian to Kalma Chowk')
+GO
+INSERT [dbo].[Routes] ([RouteNo], [Distance], [Img], [RouteName]) VALUES (N'FR-14', 7, N'/assets/RouteImages/FR-14.jpg', N'Puran Kahan to R.A Bazar')
+GO
+INSERT [dbo].[Routes] ([RouteNo], [Distance], [Img], [RouteName]) VALUES (N'FR-15', 8, N'/assets/RouteImages/FR-15.jpg', N'Bhatti Chowk to R.A Bazar')
+GO
+/****** Object:  Index [IX_cardId]    Script Date: 12/21/2023 5:18:19 PM ******/
+CREATE NONCLUSTERED INDEX [IX_cardId] ON [dbo].[BalanceHistories]
+(
+	[cardId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+GO
+/****** Object:  Index [IX_busId]    Script Date: 12/21/2023 5:18:19 PM ******/
+CREATE NONCLUSTERED INDEX [IX_busId] ON [dbo].[BusAttendents]
+(
+	[busId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+GO
+/****** Object:  Index [IX_cardId]    Script Date: 12/21/2023 5:18:19 PM ******/
+CREATE NONCLUSTERED INDEX [IX_cardId] ON [dbo].[BusAttendents]
+(
+	[cardId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+GO
+/****** Object:  Index [IX_roleId]    Script Date: 12/21/2023 5:18:19 PM ******/
+CREATE NONCLUSTERED INDEX [IX_roleId] ON [dbo].[BusAttendents]
+(
+	[roleId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+GO
+SET ANSI_PADDING ON
+GO
+/****** Object:  Index [IX_RouteNo]    Script Date: 12/21/2023 5:18:19 PM ******/
+CREATE NONCLUSTERED INDEX [IX_RouteNo] ON [dbo].[BusStops]
+(
+	[RouteNo] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+GO
+/****** Object:  Index [IX_busId]    Script Date: 12/21/2023 5:18:19 PM ******/
+CREATE NONCLUSTERED INDEX [IX_busId] ON [dbo].[Depots]
+(
+	[busId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+GO
+SET ANSI_PADDING ON
+GO
+/****** Object:  Index [IX_route_Name]    Script Date: 12/21/2023 5:18:19 PM ******/
+CREATE NONCLUSTERED INDEX [IX_route_Name] ON [dbo].[Directions]
+(
+	[route_Name] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+GO
+/****** Object:  Index [IX_busCardId]    Script Date: 12/21/2023 5:18:19 PM ******/
+CREATE NONCLUSTERED INDEX [IX_busCardId] ON [dbo].[Drivers]
+(
+	[busCardId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+GO
+/****** Object:  Index [IX_busId]    Script Date: 12/21/2023 5:18:19 PM ******/
+CREATE NONCLUSTERED INDEX [IX_busId] ON [dbo].[Drivers]
+(
+	[busId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+GO
+SET ANSI_PADDING ON
+GO
+/****** Object:  Index [IX_route_Name]    Script Date: 12/21/2023 5:18:19 PM ******/
+CREATE NONCLUSTERED INDEX [IX_route_Name] ON [dbo].[Drivers]
+(
+	[route_Name] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+GO
+/****** Object:  Index [IX_busStop_Id]    Script Date: 12/21/2023 5:18:19 PM ******/
+CREATE NONCLUSTERED INDEX [IX_busStop_Id] ON [dbo].[HomeRoutes]
+(
+	[busStop_Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+GO
+/****** Object:  Index [IX_busCardId]    Script Date: 12/21/2023 5:18:19 PM ******/
+CREATE NONCLUSTERED INDEX [IX_busCardId] ON [dbo].[Passengers]
+(
+	[busCardId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[BalanceHistories]  WITH CHECK ADD  CONSTRAINT [FK_dbo.BalanceHistories_dbo.BusCards_cardId] FOREIGN KEY([cardId])
+REFERENCES [dbo].[BusCards] ([Id])
+GO
+ALTER TABLE [dbo].[BalanceHistories] CHECK CONSTRAINT [FK_dbo.BalanceHistories_dbo.BusCards_cardId]
+GO
+ALTER TABLE [dbo].[BusAttendents]  WITH CHECK ADD  CONSTRAINT [FK_dbo.BusAttendents_dbo.BusCards_cardId] FOREIGN KEY([cardId])
+REFERENCES [dbo].[BusCards] ([Id])
+GO
+ALTER TABLE [dbo].[BusAttendents] CHECK CONSTRAINT [FK_dbo.BusAttendents_dbo.BusCards_cardId]
+GO
+ALTER TABLE [dbo].[BusAttendents]  WITH CHECK ADD  CONSTRAINT [FK_dbo.BusAttendents_dbo.Buses_busId] FOREIGN KEY([busId])
+REFERENCES [dbo].[Buses] ([Id])
+GO
+ALTER TABLE [dbo].[BusAttendents] CHECK CONSTRAINT [FK_dbo.BusAttendents_dbo.Buses_busId]
+GO
+ALTER TABLE [dbo].[BusAttendents]  WITH CHECK ADD  CONSTRAINT [FK_dbo.BusAttendents_dbo.Roles_roleId] FOREIGN KEY([roleId])
+REFERENCES [dbo].[Roles] ([Id])
+GO
+ALTER TABLE [dbo].[BusAttendents] CHECK CONSTRAINT [FK_dbo.BusAttendents_dbo.Roles_roleId]
+GO
+ALTER TABLE [dbo].[Depots]  WITH CHECK ADD  CONSTRAINT [FK_dbo.Depots_dbo.Buses_busId] FOREIGN KEY([busId])
+REFERENCES [dbo].[Buses] ([Id])
+GO
+ALTER TABLE [dbo].[Depots] CHECK CONSTRAINT [FK_dbo.Depots_dbo.Buses_busId]
+GO
+ALTER TABLE [dbo].[Directions]  WITH CHECK ADD  CONSTRAINT [FK_dbo.Directions_dbo.Routes_route_Name] FOREIGN KEY([route_Name])
+REFERENCES [dbo].[Routes] ([RouteNo])
+GO
+ALTER TABLE [dbo].[Directions] CHECK CONSTRAINT [FK_dbo.Directions_dbo.Routes_route_Name]
+GO
+ALTER TABLE [dbo].[Drivers]  WITH CHECK ADD  CONSTRAINT [FK_dbo.Drivers_dbo.BusCards_busCardId] FOREIGN KEY([busCardId])
+REFERENCES [dbo].[BusCards] ([Id])
+GO
+ALTER TABLE [dbo].[Drivers] CHECK CONSTRAINT [FK_dbo.Drivers_dbo.BusCards_busCardId]
+GO
+ALTER TABLE [dbo].[Drivers]  WITH CHECK ADD  CONSTRAINT [FK_dbo.Drivers_dbo.Buses_busId] FOREIGN KEY([busId])
+REFERENCES [dbo].[Buses] ([Id])
+GO
+ALTER TABLE [dbo].[Drivers] CHECK CONSTRAINT [FK_dbo.Drivers_dbo.Buses_busId]
+GO
+ALTER TABLE [dbo].[Drivers]  WITH CHECK ADD  CONSTRAINT [FK_dbo.Drivers_dbo.Routes_route_Name] FOREIGN KEY([route_Name])
+REFERENCES [dbo].[Routes] ([RouteNo])
+GO
+ALTER TABLE [dbo].[Drivers] CHECK CONSTRAINT [FK_dbo.Drivers_dbo.Routes_route_Name]
+GO
+ALTER TABLE [dbo].[HomeRoutes]  WITH CHECK ADD  CONSTRAINT [FK_dbo.HomeRoutes_dbo.BusStops_busStop_Id] FOREIGN KEY([busStop_Id])
+REFERENCES [dbo].[BusStops] ([Id])
+GO
+ALTER TABLE [dbo].[HomeRoutes] CHECK CONSTRAINT [FK_dbo.HomeRoutes_dbo.BusStops_busStop_Id]
+GO
+ALTER TABLE [dbo].[Passengers]  WITH CHECK ADD  CONSTRAINT [FK_dbo.Passengers_dbo.BusCards_busCardId] FOREIGN KEY([busCardId])
+REFERENCES [dbo].[BusCards] ([Id])
+GO
+ALTER TABLE [dbo].[Passengers] CHECK CONSTRAINT [FK_dbo.Passengers_dbo.BusCards_busCardId]
+GO
+USE [master]
+GO
+ALTER DATABASE [SpeedoBusDb] SET  READ_WRITE 
+GO
