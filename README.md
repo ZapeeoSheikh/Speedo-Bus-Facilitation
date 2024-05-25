@@ -9,8 +9,11 @@ https://user-images.githubusercontent.com/77886136/175025884-7289715a-bed3-4653-
 
 
 ## Prototype :
+> ![Figma Design Link](https://www.figma.com/design/dNV5NQHRV4ciIbdz48JpS8/Speedo-Management-System?node-id=0-1&t=uZDgbllZL02Yci9u-0)
+> 
+> <hr>
+>
 > ![Home Page](https://user-images.githubusercontent.com/77886136/169661523-32a23a22-1fb7-46aa-9059-3779bcf5f776.png)
-
 
 ## Images while Developement :
 > ![image](https://user-images.githubusercontent.com/77886136/169661586-b75ff274-d505-4d1a-81a6-74c19d1113e0.png)
